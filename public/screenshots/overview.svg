@@ -1,0 +1,29 @@
+<svg width="640" height="1280" viewBox="0 0 640 1280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="64" y1="50" x2="580" y2="1230" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#09121B"/>
+      <stop offset="1" stop-color="#101D2A"/>
+    </linearGradient>
+    <linearGradient id="card" x1="110" y1="260" x2="530" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00D084" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#2CE7F7" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="1280" rx="64" fill="url(#bg)"/>
+  <rect x="48" y="64" width="544" height="88" rx="24" fill="#0C1723" stroke="#1D3143"/>
+  <rect x="48" y="190" width="544" height="246" rx="32" fill="url(#card)" stroke="#2A4258"/>
+  <rect x="76" y="230" width="190" height="24" rx="12" fill="#7BA5B6" fill-opacity="0.42"/>
+  <rect x="76" y="282" width="280" height="56" rx="16" fill="#CDE6ED" fill-opacity="0.8"/>
+  <rect x="76" y="356" width="170" height="20" rx="10" fill="#A7C6D1" fill-opacity="0.55"/>
+  <rect x="48" y="470" width="260" height="190" rx="28" fill="#0E1B28" stroke="#1F3346"/>
+  <rect x="332" y="470" width="260" height="190" rx="28" fill="#0E1B28" stroke="#1F3346"/>
+  <rect x="48" y="700" width="544" height="492" rx="30" fill="#0C1723" stroke="#1F3346"/>
+  <rect x="80" y="744" width="210" height="20" rx="10" fill="#7BA5B6" fill-opacity="0.42"/>
+  <rect x="80" y="790" width="480" height="2" fill="#1F3346"/>
+  <rect x="80" y="832" width="360" height="24" rx="12" fill="#D6E9EF" fill-opacity="0.78"/>
+  <rect x="80" y="874" width="250" height="18" rx="9" fill="#9EBDCA" fill-opacity="0.48"/>
+  <rect x="80" y="928" width="390" height="24" rx="12" fill="#D6E9EF" fill-opacity="0.78"/>
+  <rect x="80" y="970" width="210" height="18" rx="9" fill="#9EBDCA" fill-opacity="0.48"/>
+  <rect x="80" y="1024" width="320" height="24" rx="12" fill="#D6E9EF" fill-opacity="0.78"/>
+  <rect x="80" y="1066" width="240" height="18" rx="9" fill="#9EBDCA" fill-opacity="0.48"/>
+</svg>

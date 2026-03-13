@@ -1,0 +1,255 @@
+{
+  "common": {
+    "skipToContent": "Saltar al contenido",
+    "changeLanguage": "Cambiar idioma"
+  },
+  "nav": {
+    "aria": "Navegación principal",
+    "features": "Funciones",
+    "demo": "Demostración",
+    "tech": "Tecnologías",
+    "faq": "FAQ",
+    "download": "Descargar APK",
+    "downloadPending": "APK pronto"
+  },
+  "hero": {
+    "eyebrow": "Finanzas personales sin ruido",
+    "title": "Clarium aporta orden financiero con una experiencia limpia y directa.",
+    "subtitle": "Una app Android minimalista para organizar ingresos, gastos y rutina con claridad visual y privacidad local-first.",
+    "downloadCta": "Descargar APK ahora",
+    "downloadPending": "Avisarme cuando el APK esté listo",
+    "exploreCta": "Explorar funciones",
+    "indicators": [
+      "Fácil de usar",
+      "Control local de datos",
+      "Diseño minimalista",
+      "Enfoque en organización personal"
+    ],
+    "mockupAlt": "Mockup premium de Clarium en smartphone",
+    "mockupTitle": "Flujo financiero claro",
+    "mockupSubtitle": "Saldo, registros y categorías sin contaminación visual."
+  },
+  "problem": {
+    "eyebrow": "Problema y solución",
+    "title": "La mayoría de apps financieras complica lo que debería ser simple.",
+    "description": "Clarium elimina el exceso de dashboards y prioriza un recorrido objetivo para personas que solo quieren organizarse mejor.",
+    "problemTitle": "Apps comunes",
+    "problemItems": [
+      "Demasiados gráficos y paneles que distraen.",
+      "Flujos largos para tareas básicas.",
+      "Navegación confusa para usuarios no técnicos.",
+      "Sobrecarga visual que reduce la confianza."
+    ],
+    "solutionTitle": "Con Clarium",
+    "solutionItems": [
+      "Interfaz limpia enfocada en la acción.",
+      "Finanzas personales en pocos toques.",
+      "Estructura intuitiva desde el primer uso.",
+      "Lectura rápida y decisiones más claras."
+    ]
+  },
+  "features": {
+    "eyebrow": "Funciones principales",
+    "title": "Todo lo que importa para el control financiero personal.",
+    "description": "Sin promesas vacías: capacidades esenciales con acabado premium y uso intuitivo.",
+    "items": [
+      {
+        "title": "Control de ingresos simplificado",
+        "description": "Registra ingresos rápido y mantén una vista mensual clara."
+      },
+      {
+        "title": "Gastos y recurrencias",
+        "description": "Sigue costos puntuales y fijos con estructura objetiva."
+      },
+      {
+        "title": "Categorías personalizadas",
+        "description": "Adapta categorías a tu rutina real."
+      },
+      {
+        "title": "Tema claro y oscuro",
+        "description": "Comodidad visual en diferentes contextos sin perder contraste."
+      },
+      {
+        "title": "Multilingüe",
+        "description": "Experiencia disponible en pt-BR, inglés y español."
+      },
+      {
+        "title": "Visual moderno e intuitivo",
+        "description": "Jerarquía fuerte para entender todo rápidamente."
+      },
+      {
+        "title": "Local-first y privado",
+        "description": "Datos bajo control del usuario con enfoque de privacidad."
+      },
+      {
+        "title": "Claridad y organización",
+        "description": "Diseño orientado a reducir fricción y mejorar consistencia."
+      }
+    ]
+  },
+  "demo": {
+    "eyebrow": "Demostración de la app",
+    "title": "Preparada para capturas reales, con placeholders premium hoy.",
+    "description": "Los cuadros siguientes representan el layout final y pueden reemplazarse sin refactorización grande.",
+    "placeholderAlt": "Placeholder de pantalla {screen}",
+    "screens": {
+      "overview": {
+        "title": "Vista general",
+        "subtitle": "Resumen de saldo, ritmo mensual y actividad reciente."
+      },
+      "transactions": {
+        "title": "Movimientos",
+        "subtitle": "Ingresos, gastos y recurrencias en lectura rápida."
+      },
+      "categories": {
+        "title": "Categorías",
+        "subtitle": "Clasificación personalizada para tu rutina financiera."
+      },
+      "settings": {
+        "title": "Preferencias",
+        "subtitle": "Tema, idioma y ajustes clave en un flujo simple."
+      }
+    },
+    "footnote": "Reemplazo futuro: conserva los mismos nombres de archivo en /public/screenshots."
+  },
+  "build": {
+    "eyebrow": "Cómo fue hecho",
+    "title": "Simplicidad visual con ingeniería sólida detrás.",
+    "description": "La implementación prioriza experiencia real, rendimiento y mantenimiento a largo plazo.",
+    "points": [
+      {
+        "title": "Dirección de producto",
+        "description": "Flujos centrados en tareas diarias, sin dependencia de dashboards complejos."
+      },
+      {
+        "title": "UX/UI refinado",
+        "description": "Tipografía legible, ritmo equilibrado y microinteracciones sutiles para generar confianza."
+      },
+      {
+        "title": "Arquitectura escalable",
+        "description": "Componentes reutilizables, i18n real y configuración central para evolución futura."
+      },
+      {
+        "title": "Rendimiento y accesibilidad",
+        "description": "Estructura optimizada para Core Web Vitals, navegación por teclado y baja carga visual."
+      }
+    ]
+  },
+  "tech": {
+    "eyebrow": "Tecnologías",
+    "title": "Stack moderna para velocidad, calidad y evolución continua.",
+    "description": "Decisiones técnicas enfocadas en estabilidad de producto, SEO y mantenimiento durable.",
+    "items": [
+      {
+        "key": "next",
+        "title": "Next.js App Router",
+        "description": "Renderizado moderno, rutas por locale y base sólida para SEO."
+      },
+      {
+        "key": "typescript",
+        "title": "TypeScript",
+        "description": "Tipado fuerte para reducir regresiones y acelerar mejoras seguras."
+      },
+      {
+        "key": "tailwind",
+        "title": "Tailwind CSS",
+        "description": "Sistema visual consistente con implementación rápida y predecible."
+      },
+      {
+        "key": "motion",
+        "title": "Framer Motion",
+        "description": "Animaciones ligeras con respeto a reduced motion."
+      },
+      {
+        "key": "intl",
+        "title": "next-intl",
+        "description": "Internacionalización robusta con soporte real para pt-BR, en y es."
+      },
+      {
+        "key": "seo",
+        "title": "SEO técnico",
+        "description": "Metadata por locale, sitemap, robots, Open Graph y Twitter cards incluidos."
+      },
+      {
+        "key": "privacy",
+        "title": "Privacidad local-first",
+        "description": "Mensaje y arquitectura alineados con control local de datos."
+      },
+      {
+        "key": "architecture",
+        "title": "Arquitectura modular",
+        "description": "Secciones desacopladas y configuración central para actualizaciones seguras."
+      },
+      {
+        "key": "multilingual",
+        "title": "Experiencia multilingüe",
+        "description": "Cambio de idioma funcional en toda la landing principal."
+      }
+    ]
+  },
+  "download": {
+    "title": "Descarga Clarium en Android y simplifica tu control financiero.",
+    "description": "El CTA principal ya está listo para conversión. Define la URL real del APK y el botón pasará a descarga directa.",
+    "availability": "Disponibilidad: versión Android vía APK. Las actualizaciones se publicarán en el mismo enlace oficial.",
+    "cta": "Descargar APK Android",
+    "pending": "Avisarme del lanzamiento",
+    "faqCta": "Ver preguntas comunes",
+    "statusReady": "APK configurado: descarga activa.",
+    "statusWaiting": "APK aún no configurado: modo de espera elegante activo."
+  },
+  "support": {
+    "eyebrow": "Apoyo al proyecto",
+    "title": "¿Te gustó Clarium? Apoya su desarrollo.",
+    "description": "Las contribuciones son opcionales y ayudan a mantener mejoras continuas en la experiencia.",
+    "copy": "Copiar Pix",
+    "copied": "Pix copiado",
+    "copyError": "Error al copiar"
+  },
+  "author": {
+    "title": "Créditos y autor",
+    "description": "{name} lidera producto, diseño e implementación de Clarium con foco en organización financiera clara para usuarios reales."
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Preguntas frecuentes",
+    "description": "Respuestas rápidas sobre descarga de APK, privacidad y evolución del proyecto.",
+    "items": [
+      {
+        "question": "¿Cómo descargo el APK?",
+        "answer": "Usa el botón principal de descarga. Cuando se defina la variable de entorno final, apuntará al enlace oficial del APK."
+      },
+      {
+        "question": "¿Clarium recopila datos personales?",
+        "answer": "Clarium sigue un enfoque local-first: prioriza control local y minimiza exposición innecesaria de datos."
+      },
+      {
+        "question": "¿Qué idiomas están disponibles?",
+        "answer": "La landing y la app están preparadas para pt-BR, inglés y español, con cambio de idioma funcional."
+      },
+      {
+        "question": "¿El proyecto tendrá nuevas funciones?",
+        "answer": "Sí. La arquitectura está organizada para evolución continua sin grandes refactorizaciones."
+      },
+      {
+        "question": "¿El uso local es seguro?",
+        "answer": "El modelo local-first reduce dependencia de servicios externos y mantiene una experiencia más directa para el usuario."
+      },
+      {
+        "question": "¿Cómo envío feedback o apoyo el proyecto?",
+        "answer": "Puedes contactar por GitHub/LinkedIn y, si deseas apoyar, usar la clave Pix disponible en esta landing."
+      }
+    ]
+  },
+  "footer": {
+    "projectLabel": "App financiero minimalista",
+    "description": "Clarium es un proyecto independiente centrado en organización financiera sin sobrecarga de interfaz.",
+    "linksTitle": "Enlaces útiles",
+    "features": "Funciones",
+    "download": "Descarga",
+    "faq": "FAQ",
+    "connectTitle": "Autor",
+    "copyright": "© {year} Clarium. Todos los derechos reservados.",
+    "notice": "Proyecto en evolución continua.",
+    "backToTop": "Volver al inicio"
+  }
+}
