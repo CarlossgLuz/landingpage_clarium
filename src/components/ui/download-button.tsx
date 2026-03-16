@@ -14,10 +14,7 @@ export function DownloadButton({ label, pendingLabel, className = '' }: Download
 
   if (!ready) {
     return (
-      <a
-        href="#download"
-        className={`focus-outline inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-panel px-5 py-3 text-sm font-semibold text-text transition hover:border-green/50 hover:text-green ${className}`.trim()}
-      >
+      <a href="#download" className={`button-secondary ${className}`.trim()}>
         <Download className="h-4 w-4" />
         {pendingLabel}
       </a>
@@ -29,7 +26,7 @@ export function DownloadButton({ label, pendingLabel, className = '' }: Download
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`focus-outline inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-green to-cyan px-5 py-3 text-sm font-bold text-canvas shadow-glow transition hover:brightness-105 ${className}`.trim()}
+      className={`button-primary ${className}`.trim()}
     >
       <Download className="h-4 w-4" />
       {label}

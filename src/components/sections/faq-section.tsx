@@ -1,3 +1,4 @@
+import { ChevronDown } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 import { Container } from '../ui/container';
@@ -14,24 +15,29 @@ export function FaqSection() {
   const items = t.raw('items') as FaqItem[];
 
   return (
-    <section id="faq" className="py-16" aria-labelledby="faq-title">
+    <section id="faq" className="section-wrap" aria-labelledby="faq-title">
       <Container>
-        <SectionTitle eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />
+        <div className="section-band">
+          <div className="section-band-inner px-6 py-8 sm:px-8 sm:py-10">
+            <SectionTitle eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />
 
-        <div className="space-y-3">
-          {items.map((item, index) => (
-            <Reveal key={item.question} delay={0.03 * index}>
-              <details className="surface group rounded-2xl p-5">
-                <summary
-                  id={index === 0 ? 'faq-title' : undefined}
-                  className="focus-outline cursor-pointer list-none text-base font-semibold text-text"
-                >
-                  {item.question}
-                </summary>
-                <p className="mt-3 border-t border-white/10 pt-3 text-sm leading-relaxed text-muted">{item.answer}</p>
-              </details>
-            </Reveal>
-          ))}
+            <div className="space-y-3">
+              {items.map((item, index) => (
+                <Reveal key={item.question} delay={0.03 * index}>
+                  <details className="section-shell group p-5">
+                    <summary
+                      id={index === 0 ? 'faq-title' : undefined}
+                      className="focus-outline flex cursor-pointer list-none items-center justify-between gap-4 text-base font-semibold text-text"
+                    >
+                      <span>{item.question}</span>
+                      <ChevronDown className="h-4 w-4 shrink-0 transition group-open:rotate-180" />
+                    </summary>
+                    <p className="mt-4 border-t border-white/10 pt-4 text-sm leading-7 text-muted">{item.answer}</p>
+                  </details>
+                </Reveal>
+              ))}
+            </div>
+          </div>
         </div>
       </Container>
     </section>

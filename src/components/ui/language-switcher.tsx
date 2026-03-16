@@ -26,20 +26,20 @@ export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
     <div className={`relative ${compact ? 'w-full' : ''}`}>
       <details className="group">
         <summary
-          className={`focus-outline flex list-none cursor-pointer items-center justify-center gap-2 rounded-xl border border-border bg-panel px-3 py-2 text-xs font-semibold text-muted transition hover:border-cyan/60 hover:text-text ${compact ? 'w-full' : ''}`}
+          className={`focus-outline flex list-none cursor-pointer items-center justify-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-xs font-semibold text-muted backdrop-blur transition hover:border-cyan/60 hover:text-text ${compact ? 'w-full' : ''}`}
           aria-label={t('changeLanguage')}
         >
           <Languages className="h-3.5 w-3.5" />
           {labels[locale]}
           <ChevronDown className="h-3.5 w-3.5 transition group-open:rotate-180" />
         </summary>
-        <div className="absolute right-0 z-20 mt-2 min-w-[132px] overflow-hidden rounded-xl border border-border bg-panel shadow-card">
+        <div className="absolute right-0 z-20 mt-2 min-w-[132px] overflow-hidden rounded-2xl border border-white/10 bg-[rgba(7,16,28,0.94)] shadow-card backdrop-blur-2xl">
           {options.map((item) => (
             <Link
               key={item}
               href={pathname}
               locale={item}
-              className="focus-outline block border-b border-border px-3 py-2 text-xs font-semibold text-muted transition hover:bg-white/5 hover:text-text last:border-b-0"
+              className="focus-outline block border-b border-white/10 px-3 py-2 text-xs font-semibold text-muted transition hover:bg-white/5 hover:text-text last:border-b-0"
             >
               {labels[item]}
             </Link>

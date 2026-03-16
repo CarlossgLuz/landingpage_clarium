@@ -24,9 +24,9 @@ export const localizedMeta: Record<
   }
 > = {
   'pt-BR': {
-    title: 'Clarium | Organize sua vida financeira com clareza',
+    title: 'Clarium | APK Android para organizar financas com menos ruido',
     description:
-      'Landing oficial do Clarium. Gerencie receitas e gastos com simplicidade, design minimalista e privacidade local-first. Baixe o APK Android.',
+      'Baixe o APK Android do Clarium e organize receitas, gastos, metas e insights com uma experiencia visual limpa, local-first e sem dashboard inflado.',
     keywords: [
       'clarium',
       'finanças pessoais',
@@ -37,9 +37,9 @@ export const localizedMeta: Record<
     ]
   },
   en: {
-    title: 'Clarium | Clear and minimal personal finance app',
+    title: 'Clarium | Android APK for clear personal finance control',
     description:
-      'Official Clarium landing page. Manage income and expenses with clarity, elegant design and local-first privacy. Download the Android APK.',
+      'Download the Clarium Android APK and organize income, expenses, goals and insights with a clean, local-first interface and no bloated dashboard.',
     keywords: [
       'clarium',
       'personal finance',
@@ -50,9 +50,9 @@ export const localizedMeta: Record<
     ]
   },
   es: {
-    title: 'Clarium | Finanzas personales claras y minimalistas',
+    title: 'Clarium | APK Android para finanzas claras y sin ruido',
     description:
-      'Landing oficial de Clarium. Organiza ingresos y gastos con simplicidad, diseño elegante y privacidad local-first. Descarga el APK Android.',
+      'Descarga el APK Android de Clarium y organiza ingresos, gastos, metas e insights con una interfaz limpia, local-first y sin dashboard inflado.',
     keywords: [
       'clarium',
       'finanzas personales',

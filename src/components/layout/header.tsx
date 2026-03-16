@@ -11,34 +11,35 @@ export function Header() {
   const t = useTranslations('nav');
 
   return (
-    <header className="sticky top-0 z-40 border-b border-white/5 bg-canvas/75 backdrop-blur-xl">
-      <Container className="flex h-16 items-center justify-between gap-4">
-        <Link href="/" className="focus-outline inline-flex items-center gap-3 rounded-lg">
-          <BrandMark />
-          <div>
-            <p className="text-sm font-semibold text-text">Clarium</p>
-            <p className="text-[11px] text-muted">Android App</p>
+    <header className="sticky top-4 z-50">
+      <Container>
+        <div className="glass-panel glass-panel-strong rounded-[999px] px-3 py-3">
+          <div className="flex items-center justify-between gap-4">
+            <Link href="/" className="focus-outline inline-flex items-center gap-3 rounded-full px-2 py-1">
+              <BrandMark />
+              <div className="hidden sm:block">
+                <p className="text-sm font-semibold text-text">Clarium</p>
+                <p className="text-[11px] uppercase tracking-[0.2em] text-muted">Android APK</p>
+              </div>
+            </Link>
+
+            <nav aria-label={t('aria')} className="hidden items-center gap-1 lg:flex">
+              <a href="#comparison" className="focus-outline rounded-full px-4 py-2 text-sm text-muted transition hover:bg-white/[0.04] hover:text-text">
+                {t('comparison')}
+              </a>
+              <a href="#product" className="focus-outline rounded-full px-4 py-2 text-sm text-muted transition hover:bg-white/[0.04] hover:text-text">
+                {t('features')}
+              </a>
+              <a href="#download" className="focus-outline rounded-full px-4 py-2 text-sm text-muted transition hover:bg-white/[0.04] hover:text-text">
+                {t('downloadNav')}
+              </a>
+            </nav>
+
+            <div className="flex items-center gap-2">
+              <LanguageSwitcher />
+              <DownloadButton label={t('download')} pendingLabel={t('downloadPending')} className="hidden sm:inline-flex" />
+            </div>
           </div>
-        </Link>
-
-        <nav aria-label={t('aria')} className="hidden items-center gap-6 md:flex">
-          <a href="#features" className="focus-outline text-sm text-muted transition hover:text-text">
-            {t('features')}
-          </a>
-          <a href="#demo" className="focus-outline text-sm text-muted transition hover:text-text">
-            {t('demo')}
-          </a>
-          <a href="#tech" className="focus-outline text-sm text-muted transition hover:text-text">
-            {t('tech')}
-          </a>
-          <a href="#faq" className="focus-outline text-sm text-muted transition hover:text-text">
-            {t('faq')}
-          </a>
-        </nav>
-
-        <div className="flex items-center gap-2">
-          <LanguageSwitcher />
-          <DownloadButton label={t('download')} pendingLabel={t('downloadPending')} className="hidden sm:inline-flex" />
         </div>
       </Container>
     </header>
