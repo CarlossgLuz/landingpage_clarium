@@ -1,10 +1,24 @@
+"use client";
+
 import { useTranslations, useLocale } from "next-intl";
+import { AlertTriangle, Download, ShieldCheck } from "lucide-react";
 import { siteConfig } from "@/lib/site";
+import { BrandMark } from "@/components/ui/BrandMark";
+import { usePathname } from "@/i18n/navigation";
+import { useEffect, useState } from "react";
 
 export function Footer() {
   const t = useTranslations("footer");
   const locale = useLocale();
+  const pathname = usePathname();
+  const [currentSuffix, setCurrentSuffix] = useState(pathname);
   const year = new Date().getFullYear();
+
+  useEffect(() => {
+    const { pathname: currentPathname, search, hash } = window.location;
+    const suffix = currentPathname.replace(/^\/(pt-BR|en|es)(?=\/|$)/, "") || "";
+    setCurrentSuffix(`${suffix || ""}${search}${hash}`);
+  }, [pathname]);
 
   return (
     <footer className="border-t border-[rgba(34,197,94,0.08)] bg-[#060b0a]" role="contentinfo">
@@ -13,7 +27,7 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2.5 mb-4">
-              <ClariumMark />
+              <BrandMark size={24} />
               <span className="font-display font-semibold text-lg text-white/90 tracking-tight" style={{ letterSpacing: "-0.02em" }}>
                 Clarium
               </span>
@@ -34,7 +48,7 @@ export function Footer() {
                 <li>
                   <a href={siteConfig.apkUrl} target="_blank" rel="noopener noreferrer"
                     className="text-sm text-white/55 hover:text-brand-400 transition-colors flex items-center gap-2">
-                    <span className="text-brand-500/60">↓</span> {t("links.download")}
+                    <Download size={14} className="text-brand-500/60" /> {t("links.download")}
                   </a>
                 </li>
               )}
@@ -70,7 +84,7 @@ export function Footer() {
               </li>
               <li>
                 <span className="text-sm text-white/35 flex items-center gap-1.5">
-                  <span className="text-brand-500/50">✓</span>
+                  <ShieldCheck size={14} className="text-brand-500/50" />
                   {t("legal.privacy")}
                 </span>
               </li>
@@ -85,13 +99,13 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-4">
             {/* Locale switcher */}
-            <div className="flex items-center gap-1" role="navigation" aria-label="Idiomas">
+            <div className="flex items-center gap-1" role="navigation" aria-label={t("languagesAria")}>
               {siteConfig.locales.map((l) => (
                 <a
                   key={l}
-                  href={`/${l}`}
+                  href={`/${l}${currentSuffix}`}
                   className={`text-xs font-mono px-2 py-1 rounded transition-colors ${l === locale ? "text-brand-400" : "text-white/25 hover:text-white/50"}`}
-                  aria-label={`Mudar para ${l}`}
+                  aria-label={t("changeLanguage", { locale: l === "pt-BR" ? "PT" : l.toUpperCase() })}
                 >
                   {l === "pt-BR" ? "PT" : l.toUpperCase()}
                 </a>
@@ -103,22 +117,11 @@ export function Footer() {
         {/* Anti-fraud notice */}
         <div className="mt-6 p-4 rounded-xl bg-[rgba(34,197,94,0.04)] border border-[rgba(34,197,94,0.10)]">
           <p className="text-xs text-white/35 font-mono leading-relaxed">
-            <span className="text-brand-500/70 mr-1.5">⚠</span>
+            <AlertTriangle size={14} className="inline mr-1.5 text-brand-500/70" />
             {t("officialNotice")}
           </p>
         </div>
       </div>
     </footer>
-  );
-}
-
-function ClariumMark() {
-  return (
-    <svg width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-      <rect width="28" height="28" rx="8" fill="rgba(34,197,94,0.12)" />
-      <path d="M8 14C8 10.686 10.686 8 14 8C15.657 8 17.157 8.672 18.243 9.757" stroke="#22c55e" strokeWidth="2" strokeLinecap="round" />
-      <circle cx="14" cy="14" r="3" fill="#22c55e" />
-      <path d="M14 11V8M14 20v-3M11 14H8M20 14h-3" stroke="rgba(34,197,94,0.4)" strokeWidth="1.5" strokeLinecap="round" />
-    </svg>
   );
 }

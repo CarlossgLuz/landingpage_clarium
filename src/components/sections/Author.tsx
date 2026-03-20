@@ -1,6 +1,8 @@
 import { useTranslations } from "next-intl";
+import { AlertTriangle, ArrowUpRight, BadgeCheck } from "lucide-react";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { siteConfig } from "@/lib/site";
+import { BrandMark } from "@/components/ui/BrandMark";
 
 export function Author() {
   const t = useTranslations("author");
@@ -21,25 +23,18 @@ export function Author() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           {/* Left: avatar & identity */}
           <div className="flex flex-col items-start gap-6">
-            {/* Avatar placeholder */}
             <div className="relative">
               <div
                 className="w-20 h-20 rounded-2xl border border-[rgba(34,197,94,0.2)] bg-[rgba(34,197,94,0.08)] flex items-center justify-center"
                 aria-hidden
               >
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden>
-                  <circle cx="16" cy="12" r="5" stroke="rgba(34,197,94,0.6)" strokeWidth="1.5" />
-                  <path d="M7 26c0-4.418 4.03-8 9-8s9 3.582 9 8" stroke="rgba(34,197,94,0.6)" strokeWidth="1.5" strokeLinecap="round" />
-                </svg>
+                <BrandMark size={56} className="rounded-[18px]" />
               </div>
-              {/* Verified badge */}
               <div
                 className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full border-2 border-[#0a1210] bg-brand-500 flex items-center justify-center"
-                aria-label="Verificado"
+                aria-label={t("verifiedBadge")}
               >
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden>
-                  <path d="M2 5l2 2 4-4" stroke="#060b0a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+                <BadgeCheck size={12} strokeWidth={2.2} color="#060b0a" aria-hidden />
               </div>
             </div>
 
@@ -65,19 +60,19 @@ export function Author() {
               <div className="flex flex-col gap-3">
                 <AuthorLink
                   href={siteConfig.author.linkedin}
-                  label="LinkedIn"
+                  label={t("links.linkedin")}
                   handle="dev-carlosgabriel"
                   icon={<LinkedInIcon />}
                 />
                 <AuthorLink
                   href={siteConfig.author.github}
-                  label="GitHub"
+                  label={t("links.github")}
                   handle="CarlossgLuz"
                   icon={<GitHubIcon />}
                 />
                 <AuthorLink
                   href={`mailto:${siteConfig.author.email}`}
-                  label="E-mail"
+                  label={t("links.email")}
                   handle={siteConfig.author.email}
                   icon={<EmailIcon />}
                 />
@@ -87,7 +82,7 @@ export function Author() {
             {/* Anti-fraud warning */}
             <div className="p-4 rounded-xl border border-[rgba(34,197,94,0.15)] bg-[rgba(34,197,94,0.04)]">
               <div className="flex items-start gap-3">
-                <span className="text-brand-400/70 text-base shrink-0 mt-0.5" aria-hidden>⚠</span>
+                <AlertTriangle size={16} className="text-brand-400/70 shrink-0 mt-0.5" aria-hidden />
                 <p className="text-xs text-white/40 leading-relaxed">{t("antifraud")}</p>
               </div>
             </div>
@@ -124,7 +119,7 @@ function AuthorLink({
           {handle}
         </div>
       </div>
-      <span className="ml-auto text-white/20 group-hover:text-brand-400/60 transition-colors text-sm" aria-hidden>→</span>
+      <ArrowUpRight size={14} className="ml-auto text-white/20 group-hover:text-brand-400/60 transition-colors" aria-hidden />
     </a>
   );
 }

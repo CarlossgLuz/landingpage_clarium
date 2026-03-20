@@ -2,14 +2,14 @@ import { useTranslations } from "next-intl";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 
 const techColors: Record<string, string> = {
-  Kotlin: "#7F52FF",
-  "Jetpack Compose": "#4285F4",
-  "Room Database": "#4CAF50",
-  Hilt: "#FF6B35",
-  Coroutines: "#22c55e",
-  "Material 3": "#1C9CEA",
-  "Clean Architecture": "#9C27B0",
-  MVVM: "#FF5722",
+  Expo: "#ffffff",
+  "Expo Router": "#7c3aed",
+  "React Native": "#61dafb",
+  TypeScript: "#3178c6",
+  "Expo SQLite": "#4CAF50",
+  "React Navigation": "#8b5cf6",
+  Reanimated: "#f59e0b",
+  "Expo Image": "#22c55e",
 };
 
 export function Tech() {

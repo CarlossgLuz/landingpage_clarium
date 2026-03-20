@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Clarium — Finanças simples. Vida clara.",
-    "description": "App de finanças minimalista, 100% gratuito, offline e local. Controle suas finanças com clareza, sem complexidade.",
+    "description": "App de finanças minimalista, 100% gratuito, offline e local. Organize lançamentos, metas, cartão e insights com clareza.",
     "ogTitle": "Clarium — Organize suas finanças com clareza",
     "ogDescription": "Gratuito. Offline. Local. Simples."
   },
@@ -10,16 +10,23 @@
     "howItsMade": "Tecnologia",
     "support": "Apoie",
     "contact": "Contato",
-    "download": "Baixar APK"
+    "download": "Baixar APK",
+    "homeAria": "Clarium — Início",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "localeSwitcher": "Seletor de idioma",
+    "changeLanguage": "Mudar idioma para {locale}"
   },
   "hero": {
     "eyebrow": "App Android · Gratuito · Offline",
     "headline": "Finanças simples.",
     "headlineAccent": "Vida clara.",
-    "subheadline": "Chega de dashboards que confundem. Clarium te dá controle financeiro real — direto, limpo e inteligente.",
+    "subheadline": "Acompanhe saldo, registre lançamentos, planeje metas e visualize insights do mês sem dashboards confusos.",
     "ctaPrimary": "Baixar APK grátis",
     "ctaSecondary": "Ver recursos",
-    "ctaFallback": "Em breve",
+    "ctaFallback": "APK disponível em breve",
+    "badgesAria": "Destaques do app",
+    "scrollLabel": "scroll",
     "badges": {
       "free": "100% Grátis",
       "offline": "Funciona offline",
@@ -28,108 +35,121 @@
       "android": "Android",
       "minimal": "Interface mínima"
     },
-    "mockupAlt": "Screenshot do app Clarium"
+    "mockupAlt": "Tela inicial do app Clarium",
+    "mockupAltSecondary": "Tela de planejamento do app Clarium"
   },
   "about": {
     "eyebrow": "O que é o Clarium",
     "headline": "Organização financeira para\npessoas reais.",
-    "body": "Clarium é um app de finanças pessoais construído com uma premissa simples: qualquer pessoa deve conseguir organizar suas finanças sem precisar virar um analista. Sem planilhas complicadas, sem menus escondidos, sem assinaturas.",
-    "body2": "Um app direto ao ponto. Para o dia a dia."
+    "body": "Clarium é um app de finanças pessoais feito para quem quer entender o mês de forma rápida. Em vez de excesso de gráficos e menus, ele foca no que importa: saldo, lançamentos, planejamento e leitura clara dos números.",
+    "body2": "Direto ao ponto. Feito para usar todo dia.",
+    "cards": [
+      { "label": "Gratuito", "sublabel": "Sem assinatura" },
+      { "label": "Offline", "sublabel": "Sem depender de internet" },
+      { "label": "Local-first", "sublabel": "Dados ficam no celular" },
+      { "label": "Simples", "sublabel": "Fluxo rápido e claro" }
+    ]
   },
   "problem": {
     "eyebrow": "O problema",
     "headline": "Apps financeiros são\ncomplexos demais.",
+    "problemListAria": "Problemas dos apps financeiros",
+    "solutionListAria": "Soluções do Clarium",
     "problemItems": [
-      "Dashboards cheios de gráficos que ninguém usa",
-      "Funcionalidades escondidas em menus profundos",
-      "Obrigatório conectar conta bancária",
-      "Paywalls para o que realmente importa",
-      "Dados enviados para servidores externos"
+      "Excesso de gráficos para tarefas simples",
+      "Fluxos lentos para lançar o básico",
+      "Menus escondendo o que importa",
+      "Dependência de conta conectada e nuvem",
+      "Mais fricção do que clareza no dia a dia"
     ],
     "solutionEyebrow": "A solução",
     "solutionHeadline": "Clarium resolve isso.",
     "solutionItems": [
-      "Interface limpa, só o essencial",
-      "Tudo em no máximo dois toques",
-      "Funciona 100% offline",
-      "Seus dados ficam só no seu celular",
-      "Gratuito, sempre"
+      "Visão mensal clara logo na primeira tela",
+      "Lançamentos rápidos para receitas e gastos",
+      "Planejamento com meta, cartão e recorrentes",
+      "Insights objetivos sobre o mês",
+      "Tudo local, offline e gratuito"
     ]
   },
   "features": {
     "eyebrow": "Recursos",
-    "headline": "Tudo que você precisa.\nNada que você não precisa.",
+    "headline": "Tudo que você precisa.\nNada que distraia.",
     "items": [
       {
-        "title": "Receitas e gastos",
-        "description": "Registre entradas e saídas com rapidez. Histórico sempre acessível."
+        "title": "Lançamentos rápidos",
+        "description": "Registre receitas e gastos em poucos toques, sem fluxo pesado."
       },
       {
-        "title": "Recorrências",
-        "description": "Contas fixas e assinaturas cadastradas uma vez, controladas sempre."
+        "title": "Visão mensal",
+        "description": "Veja saldo, entradas, saídas e últimas movimentações do mês em uma tela clara."
       },
       {
-        "title": "Categorias personalizadas",
-        "description": "Organize do seu jeito. Suas categorias, sua lógica."
+        "title": "Meta mensal",
+        "description": "Defina um limite para o mês e acompanhe seu progresso sem complicação."
       },
       {
-        "title": "100% offline",
-        "description": "Sem internet, sem servidores. Funciona onde você estiver."
+        "title": "Cartão e fatura",
+        "description": "Controle fechamento, vencimento e leitura da fatura atual no mesmo lugar."
       },
       {
-        "title": "Dados locais",
-        "description": "Seus dados ficam no seu dispositivo. Ninguém mais acessa."
+        "title": "Recorrentes",
+        "description": "Cadastre despesas fixas e acompanhe o que se repete no seu planejamento."
       },
       {
-        "title": "Multilíngue",
-        "description": "Disponível em Português, Inglês e Espanhol."
+        "title": "Insights do mês",
+        "description": "Entenda receitas, gastos e peso das categorias com leitura direta."
       }
     ]
   },
   "demo": {
     "eyebrow": "Interface",
-    "headline": "Limpo por design.",
-    "body": "Cada tela foi pensada para reduzir fricção. Informação certa, na hora certa, no lugar certo."
+    "headline": "O app real, sem mockup fake.",
+    "body": "As telas abaixo são capturas reais do Clarium, mostrando início, planejamento e insights do mês.",
+    "leftAlt": "Tela de planejamento do Clarium",
+    "centerAlt": "Tela inicial do Clarium",
+    "rightAlt": "Tela de insights do Clarium"
   },
   "howMade": {
     "eyebrow": "Como foi feito",
     "headline": "Desenvolvido com cuidado,\nnão com pressa.",
-    "body": "Cada decisão de design e código foi tomada com foco em usabilidade real e desempenho consistente. Arquitetura limpa, componentes reutilizáveis, UX validada na prática.",
+    "body": "Cada decisão de design e código foi tomada com foco em usabilidade real e desempenho consistente. Arquitetura limpa, componentes reutilizáveis e UX refinada em cima do uso cotidiano do app.",
     "pillars": [
-      { "title": "UX-first", "desc": "Interface validada com usuários reais antes de qualquer feature nova." },
-      { "title": "Performance", "desc": "Telas leves, navegação fluida, resposta imediata mesmo offline." },
-      { "title": "Código limpo", "desc": "Arquitetura escalável e manutenível para evolução contínua." },
-      { "title": "Segurança", "desc": "Zero envio de dados. Tudo fica no seu dispositivo." }
+      { "title": "UX-first", "desc": "Cada fluxo foi pensado para reduzir fricção no uso diário." },
+      { "title": "Performance", "desc": "Telas leves, navegação fluida e resposta rápida mesmo offline." },
+      { "title": "Código limpo", "desc": "Base organizada para evoluir o produto sem virar bagunça." },
+      { "title": "Privacidade", "desc": "Seus dados ficam no aparelho, sem envio para servidores externos." }
     ]
   },
   "tech": {
     "eyebrow": "Tecnologias",
     "headline": "Stack moderna.\nCódigo sólido.",
     "items": [
-      { "name": "Kotlin", "desc": "Linguagem nativa Android moderna e segura" },
-      { "name": "Jetpack Compose", "desc": "UI declarativa, performática e escalável" },
-      { "name": "Room Database", "desc": "Persistência local robusta e tipada" },
-      { "name": "Hilt", "desc": "Injeção de dependência limpa e testável" },
-      { "name": "Coroutines", "desc": "Programação assíncrona nativa Kotlin" },
-      { "name": "Material 3", "desc": "Design system moderno do Google" },
-      { "name": "Clean Architecture", "desc": "Separação clara de responsabilidades" },
-      { "name": "MVVM", "desc": "Padrão de arquitetura robusto e testável" }
+      { "name": "Expo", "desc": "Base multiplataforma usada para empacotamento e runtime do app" },
+      { "name": "Expo Router", "desc": "Roteamento baseado em arquivos para a navegação entre telas" },
+      { "name": "React Native", "desc": "Camada principal de interface mobile usada no app" },
+      { "name": "TypeScript", "desc": "Tipagem estática para manter a base mais segura e previsível" },
+      { "name": "Expo SQLite", "desc": "Persistência local usada para armazenar os dados do app" },
+      { "name": "React Navigation", "desc": "Infra de navegação usada junto com tabs e stack" },
+      { "name": "Reanimated", "desc": "Animações nativas e transições com melhor fluidez" },
+      { "name": "Expo Image", "desc": "Renderização otimizada de imagens dentro do app" }
     ]
   },
   "support": {
     "eyebrow": "Apoie o projeto",
     "headline": "Ajude o Clarium\na continuar evoluindo.",
-    "body": "O Clarium é um projeto independente, desenvolvido com dedicação real. Se ele te ajudou, considere apoiar com qualquer valor via Pix. Cada contribuição financia novas melhorias e manutenção.",
+    "body": "O Clarium é um projeto independente. Se o app te ajuda no dia a dia, você pode apoiar com qualquer valor via Pix para manutenção e melhorias futuras.",
     "pixLabel": "Chave Pix",
     "copyButton": "Copiar chave",
     "copiedButton": "Copiado!",
-    "disclaimer": "Apoio 100% voluntário. O app continuará gratuito independentemente."
+    "disclaimer": "Apoio 100% voluntário. O app continuará gratuito."
   },
   "author": {
     "eyebrow": "Autoria",
     "headline": "Desenvolvido por\nCarlos Gabriel.",
-    "body": "Desenvolvedor Android independente apaixonado por interfaces bem feitas e software que realmente funciona. O Clarium é um projeto pessoal de produto, não um template.",
+    "body": "Desenvolvedor Android independente focado em interfaces bem resolvidas e produtos que realmente funcionam. O Clarium nasceu como app real, não como vitrine genérica.",
     "officialChannels": "Canais oficiais",
+    "verifiedBadge": "Canal verificado",
     "antifraud": "Atenção: os únicos canais oficiais do Clarium e do autor são os listados aqui. Desconfie de qualquer cópia, clone ou versão não oficial do app.",
     "links": {
       "linkedin": "LinkedIn",
@@ -140,7 +160,7 @@
   "contact": {
     "eyebrow": "Contato",
     "headline": "Vamos conversar.",
-    "body": "Tem feedback, encontrou um bug, tem uma sugestão ou quer contratar? Qualquer canal abaixo funciona.",
+    "body": "Tem feedback, encontrou um bug, quer sugerir algo ou falar sobre trabalho? Os canais abaixo são os oficiais.",
     "items": [
       { "label": "LinkedIn", "desc": "Mensagem profissional ou networking" },
       { "label": "E-mail", "desc": "Bugs, feedback e contratação" },
@@ -153,40 +173,42 @@
     "items": [
       {
         "q": "O app é realmente gratuito?",
-        "a": "Sim. 100% gratuito, sem anúncios, sem assinatura, sem paywall. Sempre."
+        "a": "Sim. 100% gratuito, sem anúncios, sem assinatura e sem paywall."
       },
       {
         "q": "Funciona sem internet?",
-        "a": "Totalmente. O Clarium foi construído para funcionar offline. Não precisa de conexão para absolutamente nada."
+        "a": "Sim. O Clarium foi pensado para funcionar offline, com os dados armazenados localmente no aparelho."
+      },
+      {
+        "q": "O que eu consigo controlar no app?",
+        "a": "Saldo do mês, receitas, gastos, meta mensal, cartão, recorrentes e insights sobre a distribuição das finanças."
       },
       {
         "q": "Onde ficam meus dados financeiros?",
-        "a": "No seu celular, e só lá. O app não tem servidor, não faz backup em nuvem, não envia nada a lugar algum. Seus dados são seus."
-      },
-      {
-        "q": "É seguro instalar um APK fora da Play Store?",
-        "a": "Sim, desde que você baixe pelo link oficial desta página. O APK é assinado pelo autor e pode ser verificado. Desconfie de outras fontes."
+        "a": "No seu celular. O app não depende de servidor para armazenar seus registros financeiros."
       },
       {
         "q": "Como baixar o APK?",
-        "a": "Clique no botão de download no topo desta página. O arquivo APK será baixado diretamente para o seu Android."
+        "a": "Clique no botão de download no topo desta página. O APK será baixado diretamente para o seu Android."
       },
       {
-        "q": "O projeto vai continuar recebendo atualizações?",
-        "a": "Sim. O Clarium é um projeto em evolução contínua. Novas versões com melhorias são lançadas regularmente."
+        "q": "O projeto continuará recebendo atualizações?",
+        "a": "Sim. O Clarium segue em evolução, com melhorias contínuas de produto e experiência."
       },
       {
         "q": "Como posso apoiar o projeto?",
-        "a": "Via Pix, na seção de apoio desta página. Qualquer valor é bem-vindo e vai direto para o desenvolvimento."
+        "a": "Pela seção de apoio desta página, via Pix. Qualquer valor ajuda a manter o projeto."
       },
       {
         "q": "Como entrar em contato?",
-        "a": "Via LinkedIn, e-mail ou GitHub. Todos os canais oficiais estão na seção de contato e no footer desta página."
+        "a": "Via LinkedIn, e-mail ou GitHub. Os canais oficiais estão listados nesta página."
       }
     ]
   },
   "footer": {
     "tagline": "Finanças simples. Vida clara.",
+    "languagesAria": "Idiomas disponíveis",
+    "changeLanguage": "Mudar idioma para {locale}",
     "links": {
       "title": "Links",
       "download": "Baixar APK",

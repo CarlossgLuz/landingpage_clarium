@@ -38,20 +38,15 @@ export function Demo() {
         {/* Three phones */}
         <div className="flex items-end justify-center gap-6 md:gap-10">
           <div className="hidden sm:block opacity-40 scale-75 origin-bottom translate-y-6">
-            <PhoneMockup screenIndex={2} alt="" />
+            <PhoneMockup screenIndex={2} alt={t("leftAlt")} />
           </div>
           <div className="relative z-10">
-            <PhoneMockup screenIndex={0} alt="Tela de início do Clarium" />
+            <PhoneMockup screenIndex={0} alt={t("centerAlt")} />
           </div>
           <div className="hidden sm:block opacity-40 scale-75 origin-bottom translate-y-6">
-            <PhoneMockup screenIndex={1} alt="" />
+            <PhoneMockup screenIndex={1} alt={t("rightAlt")} />
           </div>
         </div>
-
-        {/* Placeholder notice */}
-        <p className="text-center text-xs text-white/20 font-mono mt-8">
-          ↑ interfaces ilustrativas — placeholders prontos para substituição por capturas reais
-        </p>
       </div>
     </section>
   );

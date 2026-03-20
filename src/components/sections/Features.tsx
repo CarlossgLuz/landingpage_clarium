@@ -1,7 +1,15 @@
 import { useTranslations } from "next-intl";
+import { ArrowUpDown, BrainCircuit, CreditCard, Goal, RefreshCw, Wallet } from "lucide-react";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 
-const featureIcons = ["↕", "↻", "◈", "◎", "□", "⬡"];
+const featureIcons = [
+  ArrowUpDown,
+  Wallet,
+  Goal,
+  CreditCard,
+  RefreshCw,
+  BrainCircuit,
+];
 
 export function Features() {
   const t = useTranslations("features");
@@ -42,7 +50,10 @@ export function Features() {
                   className="w-9 h-9 rounded-xl flex items-center justify-center text-brand-400 font-mono text-base border border-[rgba(34,197,94,0.15)] bg-[rgba(34,197,94,0.07)] group-hover:bg-[rgba(34,197,94,0.12)] transition-colors"
                   aria-hidden
                 >
-                  {featureIcons[i]}
+                  {(() => {
+                    const Icon = featureIcons[i];
+                    return <Icon size={16} strokeWidth={1.8} />;
+                  })()}
                 </div>
                 <div className="text-[10px] font-mono text-white/20">0{i + 1}</div>
               </div>

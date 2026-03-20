@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { HardDrive, LayoutPanelTop, ShieldCheck, WifiOff } from "lucide-react";
 import { siteConfig } from "@/lib/site";
 import { PhoneMockup } from "@/components/ui/PhoneMockup";
 import { Badge } from "@/components/ui/Badge";
@@ -103,7 +104,7 @@ export function Hero() {
                     {t("ctaPrimary")}
                   </Button>
                   <div className="absolute -bottom-8 left-0 text-xs text-white/35 font-mono whitespace-nowrap">
-                    {t("ctaFallback")} — disponível em breve
+                    {t("ctaFallback")}
                   </div>
                 </div>
               )}
@@ -119,13 +120,15 @@ export function Hero() {
             </div>
 
             {/* Badges */}
-            <div className="flex flex-wrap gap-2 mt-1" role="list" aria-label="Características do app">
+            <div className="flex flex-wrap gap-2 mt-1" role="list" aria-label={t("badgesAria")}>
               {badgeKeys.map((key) => (
                 <Badge key={key} role="listitem">
                   {key === "free" && <CheckIcon />}
                   {key === "offline" && <WifiOffIcon />}
+                  {key === "local" && <HardDrive size={10} strokeWidth={1.8} />}
                   {key === "secure" && <LockIcon />}
                   {key === "android" && <AndroidSmallIcon />}
+                  {key === "minimal" && <LayoutPanelTop size={10} strokeWidth={1.8} />}
                   {t(`badges.${key}`)}
                 </Badge>
               ))}
@@ -146,7 +149,7 @@ export function Hero() {
                 className="absolute -left-16 top-12 opacity-35 scale-90 origin-right hidden lg:block"
                 aria-hidden
               >
-                <PhoneMockup screenIndex={2} alt="" className="pointer-events-none" />
+                <PhoneMockup screenIndex={2} alt={t("mockupAltSecondary")} className="pointer-events-none" />
               </div>
             </div>
           </div>
@@ -159,7 +162,7 @@ export function Hero() {
             className="flex flex-col items-center gap-2 text-white/20 hover:text-white/40 transition-colors group"
             tabIndex={-1}
           >
-            <span className="text-[10px] font-mono tracking-widest uppercase">scroll</span>
+            <span className="text-[10px] font-mono tracking-widest uppercase">{t("scrollLabel")}</span>
             <div className="w-px h-10 bg-gradient-to-b from-white/20 to-transparent group-hover:from-brand-500/40 transition-all" />
           </a>
         </div>
@@ -194,18 +197,13 @@ function CheckIcon() {
 
 function WifiOffIcon() {
   return (
-    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden>
-      <path d="M1 1l8 8M5 7.5a.5.5 0 110-1 .5.5 0 010 1z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
-    </svg>
+    <WifiOff size={10} strokeWidth={1.8} aria-hidden />
   );
 }
 
 function LockIcon() {
   return (
-    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden>
-      <rect x="2" y="4.5" width="6" height="4.5" rx="1" stroke="currentColor" strokeWidth="1.2" />
-      <path d="M3.5 4.5V3a1.5 1.5 0 013 0v1.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
-    </svg>
+    <ShieldCheck size={10} strokeWidth={1.8} aria-hidden />
   );
 }
 

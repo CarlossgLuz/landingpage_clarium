@@ -2,8 +2,11 @@
 
 import { useState, useEffect } from "react";
 import { useTranslations, useLocale } from "next-intl";
+import { Globe } from "lucide-react";
 import { siteConfig } from "@/lib/site";
 import { Button } from "@/components/ui/Button";
+import { BrandMark } from "@/components/ui/BrandMark";
+import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
 const localeLabels: Record<string, string> = {
@@ -48,19 +51,19 @@ export function Navbar() {
         aria-label="Main navigation"
       >
         {/* Logo */}
-        <a
-          href={`/${locale}`}
+        <Link
+          href="/"
           className="flex items-center gap-2.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-500 rounded-lg"
-          aria-label="Clarium — Home"
+          aria-label={t("homeAria")}
         >
-          <ClariumMark />
+          <BrandMark size={28} />
           <span
             className="font-display font-semibold text-lg text-white/90 tracking-tight"
             style={{ letterSpacing: "-0.02em" }}
           >
             Clarium
           </span>
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-6">
@@ -84,7 +87,7 @@ export function Navbar() {
               {t("download")}
             </Button>
           ) : (
-            <Button size="sm" disabled aria-label="APK em breve">
+            <Button size="sm" disabled aria-label={t("download")}>
               <AndroidIcon />
               {t("download")}
             </Button>
@@ -95,7 +98,7 @@ export function Navbar() {
         <button
           className="md:hidden p-2 rounded-lg text-white/60 hover:text-white/90 hover:bg-white/5 transition-all"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
+          aria-label={menuOpen ? t("closeMenu") : t("openMenu")}
           aria-expanded={menuOpen}
         >
           {menuOpen ? <XIcon /> : <MenuIcon />}
@@ -138,47 +141,43 @@ export function Navbar() {
 }
 
 function LocaleSwitch({ locale }: { locale: string }) {
+  const t = useTranslations("nav");
+  const pathname = usePathname();
   const locales = siteConfig.locales;
+  const [currentSuffix, setCurrentSuffix] = useState(pathname);
+
+  useEffect(() => {
+    const { pathname: currentPathname, search, hash } = window.location;
+    const suffix = currentPathname.replace(/^\/(pt-BR|en|es)(?=\/|$)/, "") || "";
+    setCurrentSuffix(`${suffix || ""}${search}${hash}`);
+  }, [pathname]);
+
   return (
-    <div className="flex items-center gap-1 bg-white/5 rounded-lg p-0.5" role="navigation" aria-label="Seletor de idioma">
+    <div
+      className="flex items-center gap-1 bg-white/5 rounded-lg p-0.5"
+      role="navigation"
+      aria-label={t("localeSwitcher")}
+    >
+      <span className="px-2 text-white/30" aria-hidden>
+        <Globe size={14} strokeWidth={1.7} />
+      </span>
       {locales.map((l) => (
         <a
           key={l}
-          href={`/${l}`}
+          href={`/${l}${currentSuffix}`}
           className={cn(
             "px-2 py-1 text-xs font-mono font-medium rounded-md transition-all",
             l === locale
               ? "bg-brand-500/20 text-brand-400"
               : "text-white/35 hover:text-white/60"
           )}
-          aria-label={`Mudar idioma para ${l}`}
+          aria-label={t("changeLanguage", { locale: localeLabels[l] })}
           aria-current={l === locale ? "true" : undefined}
         >
           {localeLabels[l]}
         </a>
       ))}
     </div>
-  );
-}
-
-function ClariumMark() {
-  return (
-    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-      <rect width="28" height="28" rx="8" fill="rgba(34,197,94,0.12)" />
-      <path
-        d="M8 14C8 10.686 10.686 8 14 8C15.657 8 17.157 8.672 18.243 9.757"
-        stroke="#22c55e"
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-      <circle cx="14" cy="14" r="3" fill="#22c55e" />
-      <path
-        d="M14 11V8M14 20v-3M11 14H8M20 14h-3"
-        stroke="rgba(34,197,94,0.4)"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-    </svg>
   );
 }
 

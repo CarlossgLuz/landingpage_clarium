@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { CircleCheckBig, CircleX } from "lucide-react";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 
 export function Problem() {
@@ -30,13 +31,13 @@ export function Problem() {
             >
               {t("headline")}
             </h2>
-            <ul className="space-y-3" role="list" aria-label="Problemas dos apps financeiros">
+            <ul className="space-y-3" role="list" aria-label={t("problemListAria")}>
               {problemItems.map((item, i) => (
                 <li
                   key={i}
                   className="flex items-start gap-3 text-sm text-white/40 py-3 border-b border-white/[0.04]"
                 >
-                  <span className="text-white/20 mt-0.5 shrink-0 font-mono text-xs">✕</span>
+                  <CircleX size={14} className="text-white/20 mt-0.5 shrink-0" aria-hidden />
                   {item}
                 </li>
               ))}
@@ -58,13 +59,13 @@ export function Problem() {
             >
               {t("solutionHeadline")}
             </h2>
-            <ul className="space-y-3" role="list" aria-label="Soluções do Clarium">
+            <ul className="space-y-3" role="list" aria-label={t("solutionListAria")}>
               {solutionItems.map((item, i) => (
                 <li
                   key={i}
                   className="flex items-start gap-3 text-sm text-white/70 py-3 border-b border-[rgba(34,197,94,0.07)]"
                 >
-                  <span className="text-brand-400 mt-0.5 shrink-0 font-mono text-xs">✓</span>
+                  <CircleCheckBig size={14} className="text-brand-400 mt-0.5 shrink-0" aria-hidden />
                   {item}
                 </li>
               ))}
