@@ -52,6 +52,22 @@ export function Footer() {
                   </a>
                 </li>
               )}
+              {siteConfig.repos.site && (
+                <li>
+                  <a href={siteConfig.repos.site} target="_blank" rel="noopener noreferrer"
+                    className="text-sm text-white/55 hover:text-white/90 transition-colors">
+                    {t("links.siteRepo")}
+                  </a>
+                </li>
+              )}
+              {siteConfig.repos.app && (
+                <li>
+                  <a href={siteConfig.repos.app} target="_blank" rel="noopener noreferrer"
+                    className="text-sm text-white/55 hover:text-white/90 transition-colors">
+                    {t("links.appRepo")}
+                  </a>
+                </li>
+              )}
               <li>
                 <a href={siteConfig.links.github} target="_blank" rel="noopener noreferrer"
                   className="text-sm text-white/55 hover:text-white/90 transition-colors">
@@ -86,6 +102,12 @@ export function Footer() {
                 <span className="text-sm text-white/35 flex items-center gap-1.5">
                   <ShieldCheck size={14} className="text-brand-500/50" />
                   {t("legal.privacy")}
+                </span>
+              </li>
+              <li>
+                <span className="text-sm text-white/35 flex items-center gap-1.5">
+                  <ShieldCheck size={14} className="text-brand-500/50" />
+                  {t("legal.opensource")}
                 </span>
               </li>
             </ul>

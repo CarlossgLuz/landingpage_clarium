@@ -149,12 +149,17 @@
     "headline": "Desenvolvido por\nCarlos Gabriel.",
     "body": "Desenvolvedor Android independente focado em interfaces bem resolvidas e produtos que realmente funcionam. O Clarium nasceu como app real, não como vitrine genérica.",
     "officialChannels": "Canais oficiais",
+    "officialRepos": "Repositórios oficiais",
     "verifiedBadge": "Canal verificado",
     "antifraud": "Atenção: os únicos canais oficiais do Clarium e do autor são os listados aqui. Desconfie de qualquer cópia, clone ou versão não oficial do app.",
+    "sourceCodeTitle": "Código-fonte público e verificável",
+    "sourceCodeBody": "A landing já é open source sob licença MIT. O app possui repositório público oficial listado aqui. Para anunciar o app formalmente como open source também no sentido jurídico, publique uma licença no repositório dele.",
     "links": {
       "linkedin": "LinkedIn",
       "github": "GitHub",
-      "email": "E-mail"
+      "email": "E-mail",
+      "siteRepo": "Repo do site",
+      "appRepo": "Repo do app"
     }
   },
   "contact": {
@@ -202,6 +207,10 @@
       {
         "q": "Como entrar em contato?",
         "a": "Via LinkedIn, e-mail ou GitHub. Os canais oficiais estão listados nesta página."
+      },
+      {
+        "q": "O projeto é open source?",
+        "a": "A landing deste site já é open source sob licença MIT. O app possui repositório público oficial; para chamá-lo formalmente de open source também no sentido de licença, publique a licença no repositório do app."
       }
     ]
   },
@@ -212,6 +221,8 @@
     "links": {
       "title": "Links",
       "download": "Baixar APK",
+      "siteRepo": "Repo do site",
+      "appRepo": "Repo do app",
       "github": "GitHub",
       "linkedin": "LinkedIn",
       "email": "E-mail",
@@ -220,7 +231,8 @@
     "legal": {
       "title": "Legal",
       "official": "Canais oficiais",
-      "privacy": "Dados locais — sem rastreamento"
+      "privacy": "Dados locais — sem rastreamento",
+      "opensource": "Landing open source sob MIT"
     },
     "copyright": "© {year} Carlos Gabriel. Projeto independente.",
     "officialNotice": "Os canais oficiais do Clarium são exclusivamente os listados nesta página.",

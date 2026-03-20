@@ -1,134 +1,142 @@
-# Clarium Landing Page
+# Clarium Landing
 
-Landing page premium para o app Clarium — gerenciamento financeiro minimalista.
+Landing page oficial do Clarium, construída em `Next.js 14` com `App Router`, `next-intl` e `Tailwind CSS`.
+
+## Visão Geral
+
+- Landing multilíngue: `pt-BR`, `en`, `es`
+- Conteúdo alinhado ao app oficial
+- Screenshots reais do app
+- Avisos antifraude e canais oficiais
+- Preparada para publicação do APK
+- Repositório do site licenciado em `MIT`
 
 ## Stack
 
-- **Next.js 14** (App Router)
-- **TypeScript**
-- **Tailwind CSS**
-- **next-intl** (i18n: pt-BR, en, es)
-- **Framer Motion** (instalado, pronto para uso progressivo)
+- `Next.js 14`
+- `TypeScript`
+- `Tailwind CSS`
+- `next-intl`
+- `lucide-react`
 
-## Setup
+## Estrutura
+
+```text
+public/
+  img/
+    brand/
+    screens/
+
+src/
+  app/
+    [locale]/
+  components/
+    layout/
+    sections/
+    ui/
+  i18n/
+  lib/
+  messages/
+```
+
+## Ambiente
+
+Crie um `.env.local` a partir do exemplo:
+
+```bash
+cp .env.local.example .env.local
+```
+
+Variáveis:
+
+| Variável | Obrigatória | Uso |
+|---|---:|---|
+| `NEXT_PUBLIC_SITE_URL` | Sim | URL pública final do site |
+| `NEXT_PUBLIC_APK_URL` | Não | Link direto do APK. Se vazia, o CTA fica desabilitado |
+| `NEXT_PUBLIC_SITE_REPO_URL` | Recomendado | Repositório oficial desta landing |
+| `NEXT_PUBLIC_APP_REPO_URL` | Recomendado | Repositório oficial do app |
+| `NEXT_PUBLIC_APP_REPO_BRANCH` | Não | Branch oficial do app exibida no site |
+
+Exemplo:
+
+```env
+NEXT_PUBLIC_SITE_URL=https://clarium.app
+NEXT_PUBLIC_APK_URL=
+NEXT_PUBLIC_SITE_REPO_URL=https://github.com/SEU_USUARIO/SEU_REPO_DA_LANDING
+NEXT_PUBLIC_APP_REPO_URL=https://github.com/CarlossgLuz/controle-fatura
+NEXT_PUBLIC_APP_REPO_BRANCH=feat/home-shell
+```
+
+## Desenvolvimento
 
 ```bash
 npm install
-cp .env.local.example .env.local
-# editar .env.local com suas URLs reais
 npm run dev
 ```
 
-## Build
+Produção:
 
 ```bash
 npm run build
 npm start
 ```
 
-## Variáveis de ambiente
+## Conteúdo Central
 
-| Variável | Descrição |
-|---|---|
-| `NEXT_PUBLIC_SITE_URL` | URL final do site (ex: `https://clarium.app`) |
-| `NEXT_PUBLIC_APK_URL` | URL direta do APK para download. Se vazia, o CTA fica desabilitado com fallback elegante. |
+Os pontos principais do projeto ficam centralizados aqui:
 
-## Onde substituir
+- Configurações, links e repositórios oficiais: `src/lib/site.ts`
+- Traduções: `src/messages/pt-BR.json`, `src/messages/en.json`, `src/messages/es.json`
+- Screenshots reais: `public/img/screens/home.jpg`, `public/img/screens/planning.jpg`, `public/img/screens/insights.jpg`
+- Ícone oficial: `public/img/brand/clarium-icon.png`
 
-### Screenshots / telas do app
-Arquivo: `src/components/ui/PhoneMockup.tsx`
-- Os SVGs dentro do array `screens[]` são os mockups gerados.
-- Substitua cada SVG por `<img src="/screenshots/screen-N.png" />` quando tiver capturas reais.
-- Estrutura já preparada para troca sem refatoração.
+## Segurança e Antifraude
 
-### Logo
-- Marca provisória em: `src/components/layout/Navbar.tsx` → componente `<ClariumMark />`
-- Footer: `src/components/layout/Footer.tsx` → componente `<ClariumMark />`
-- Favicon: `src/app/icon.tsx`
-- OG Image: `src/app/opengraph-image.tsx`
-- Substitua pelos SVGs/PNGs finais quando disponíveis.
+Esta landing já inclui:
 
-### Link do APK
-Variável `NEXT_PUBLIC_APK_URL` no `.env.local`.
-Também centralizado em `src/lib/site.ts` → `siteConfig.apkUrl`.
+- aviso de canais oficiais
+- indicação de repositórios oficiais
+- separação clara entre perfil do autor e repositórios do projeto
+- conteúdo orientando o usuário a desconfiar de cópias e APKs fora dos links oficiais
 
-### Textos / traduções
-- `src/messages/pt-BR.json`
-- `src/messages/en.json`
-- `src/messages/es.json`
+Antes de publicar o APK, confirme:
 
-### Dados do autor / links
-`src/lib/site.ts` → objeto `siteConfig.author` e `siteConfig.links`.
+1. `NEXT_PUBLIC_APK_URL` aponta para a fonte oficial final
+2. `NEXT_PUBLIC_SITE_REPO_URL` aponta para o repositório público correto da landing
+3. `NEXT_PUBLIC_APP_REPO_URL` aponta para o repositório oficial correto do app
+4. domínio final e favicon estão corretos
+5. o APK publicado corresponde à build assinada oficial
 
-## Estrutura
+## Licença
 
-```
-src/
-├── app/
-│   ├── [locale]/
-│   │   ├── layout.tsx       # layout com metadata por locale
-│   │   └── page.tsx         # página principal
-│   ├── globals.css
-│   ├── icon.tsx
-│   ├── opengraph-image.tsx
-│   ├── twitter-image.tsx
-│   ├── robots.ts
-│   └── sitemap.ts
-├── components/
-│   ├── layout/
-│   │   ├── Navbar.tsx
-│   │   └── Footer.tsx
-│   ├── sections/
-│   │   ├── Hero.tsx
-│   │   ├── About.tsx
-│   │   ├── Problem.tsx
-│   │   ├── Features.tsx
-│   │   ├── Demo.tsx
-│   │   ├── HowMade.tsx
-│   │   ├── Tech.tsx
-│   │   ├── Support.tsx
-│   │   ├── Author.tsx
-│   │   ├── Contact.tsx
-│   │   └── FAQ.tsx
-│   └── ui/
-│       ├── Badge.tsx
-│       ├── Button.tsx
-│       ├── PhoneMockup.tsx
-│       └── SectionLabel.tsx
-├── i18n/
-│   ├── routing.ts
-│   └── request.ts
-├── lib/
-│   ├── site.ts              # config central
-│   └── utils.ts
-└── messages/
-    ├── pt-BR.json
-    ├── en.json
-    └── es.json
-```
+Este repositório está sob [MIT](./LICENSE).
 
-## Rotas
+Observação importante:
 
-| Rota | Locale |
-|---|---|
-| `/` | Redirect → `/pt-BR` |
-| `/pt-BR` | Português (Brasil) |
-| `/en` | English |
-| `/es` | Español |
+- A landing já pode ser comunicada como `open source`
+- O repositório do app `controle-fatura`, no branch consultado (`feat/home-shell`), está público mas sem arquivo `LICENSE`
+- Sem licença, o app ainda não deve ser anunciado juridicamente como `open source`, apenas como `código-fonte público`
 
-## SEO
+Se quiser comunicar ambos como open source sem ambiguidade, publique também uma licença no repositório do app.
 
-- Metadata dinâmica por locale
-- Open Graph + Twitter Card
-- Sitemap em `/sitemap.xml`
-- Robots em `/robots.txt`
-- HTML semântico com landmarks, headings e aria corretos
-- Canonical + hreflang por locale
+## Checklist de Publicação
 
-## Notas técnicas
+1. Configurar `.env.local` com domínio, APK e repositórios oficiais.
+2. Publicar o repositório da landing e preencher `NEXT_PUBLIC_SITE_REPO_URL`.
+3. Adicionar `LICENSE` no repositório do app, se quiser usar a expressão “open source” para ele também.
+4. Validar metadata final, favicon, links de contato e links antifraude.
+5. Subir o site na hospedagem final.
+6. Só depois publicar o link do APK.
 
-- Fontes: **Sora** (display) + **DM Sans** (body) + **JetBrains Mono** (mono) via Google Fonts
-- Dark-first, paleta verde da identidade Clarium
-- `PhoneMockup` gera SVGs inline como base64 — zero dependência de imagens externas
-- Framer Motion instalado mas não ativado por padrão; adicionar `"use client"` + `motion.*` conforme necessário sem quebrar SSR
-- Reduced motion respeitado via CSS media query global
+## O Que Ainda Falta
+
+- URL final do APK
+- URL final do repositório público da landing
+- licença no repositório do app, se a comunicação oficial for “ambos open source”
+- validação final em ambiente com `node`/`npm` instalado para rodar `build` e `lint`
+
+## Observações Técnicas
+
+- O locale switch foi ajustado para trocar rota preservando o caminho atual.
+- O segmento `[locale]` usa `setRequestLocale`, evitando renderização presa no idioma padrão.
+- O footer foi convertido para client component para suportar leitura do pathname atual.

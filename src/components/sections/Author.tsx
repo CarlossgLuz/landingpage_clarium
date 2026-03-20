@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import { AlertTriangle, ArrowUpRight, BadgeCheck } from "lucide-react";
+import { AlertTriangle, ArrowUpRight, BadgeCheck, Code2 } from "lucide-react";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { siteConfig } from "@/lib/site";
 import { BrandMark } from "@/components/ui/BrandMark";
@@ -79,11 +79,47 @@ export function Author() {
               </div>
             </div>
 
+            {(siteConfig.repos.site || siteConfig.repos.app) && (
+              <div>
+                <h3 className="text-xs font-mono font-medium text-white/40 uppercase tracking-widest mb-4">
+                  {t("officialRepos")}
+                </h3>
+                <div className="flex flex-col gap-3">
+                  {siteConfig.repos.site && (
+                    <AuthorLink
+                      href={siteConfig.repos.site}
+                      label={t("links.siteRepo")}
+                      handle={siteConfig.repos.site.replace("https://github.com/", "")}
+                      icon={<GitHubIcon />}
+                    />
+                  )}
+                  {siteConfig.repos.app && (
+                    <AuthorLink
+                      href={siteConfig.repos.app}
+                      label={t("links.appRepo")}
+                      handle={`${siteConfig.repos.app.replace("https://github.com/", "")}${siteConfig.repos.appBranch ? `#${siteConfig.repos.appBranch}` : ""}`}
+                      icon={<GitHubIcon />}
+                    />
+                  )}
+                </div>
+              </div>
+            )}
+
             {/* Anti-fraud warning */}
             <div className="p-4 rounded-xl border border-[rgba(34,197,94,0.15)] bg-[rgba(34,197,94,0.04)]">
               <div className="flex items-start gap-3">
                 <AlertTriangle size={16} className="text-brand-400/70 shrink-0 mt-0.5" aria-hidden />
                 <p className="text-xs text-white/40 leading-relaxed">{t("antifraud")}</p>
+              </div>
+            </div>
+
+            <div className="p-4 rounded-xl border border-[rgba(240,253,244,0.08)] bg-[rgba(255,255,255,0.02)]">
+              <div className="flex items-start gap-3">
+                <Code2 size={16} className="text-brand-400/70 shrink-0 mt-0.5" aria-hidden />
+                <div>
+                  <p className="text-sm text-white/70 mb-1">{t("sourceCodeTitle")}</p>
+                  <p className="text-xs text-white/40 leading-relaxed">{t("sourceCodeBody")}</p>
+                </div>
               </div>
             </div>
           </div>
