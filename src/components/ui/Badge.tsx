@@ -1,14 +1,15 @@
 import { cn } from "@/lib/utils";
 
-interface BadgeProps {
+interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
   children: React.ReactNode;
   className?: string;
   variant?: "default" | "outline" | "subtle";
 }
 
-export function Badge({ children, className, variant = "default" }: BadgeProps) {
+export function Badge({ children, className, variant = "default", ...props }: BadgeProps) {
   return (
     <span
+      {...props}
       className={cn(
         "inline-flex items-center gap-1.5 rounded-full text-xs font-medium px-3 py-1 font-mono tracking-wide",
         variant === "default" && "bg-brand-500/10 text-brand-400 border border-brand-500/20",
