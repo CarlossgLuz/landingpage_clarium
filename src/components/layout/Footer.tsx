@@ -117,7 +117,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-[rgba(240,253,244,0.05)] pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <p className="text-xs text-white/25 font-mono">
-            {t("copyright").replace("{year}", String(year))}
+            {t("copyright", { year })}
           </p>
           <div className="flex items-center gap-4">
             {/* Locale switcher */}
