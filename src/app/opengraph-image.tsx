@@ -1,70 +1,122 @@
-import { ImageResponse } from 'next/og';
+import { ImageResponse } from "next/og";
+import { siteConfig } from "@/lib/site";
 
-export const size = {
-  width: 1200,
-  height: 630
-};
-
-export const contentType = 'image/png';
+export const size = { width: 1200, height: 630 };
+export const contentType = "image/png";
 
 export default function OpenGraphImage() {
   return new ImageResponse(
     (
       <div
         style={{
-          width: '100%',
-          height: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-          padding: 56,
-          background: 'radial-gradient(circle at 20% 10%, rgba(126, 217, 87, 0.24), transparent 38%), radial-gradient(circle at 84% 0%, rgba(84, 165, 255, 0.18), transparent 40%), linear-gradient(165deg, #040814 0%, #0a1425 60%, #081220 100%)',
-          color: '#edf5ff'
+          width: 1200,
+          height: 630,
+          background: "#060b0a",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          fontFamily: "sans-serif",
+          position: "relative",
         }}
       >
+        {/* Grid dots bg */}
         <div
           style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 18
+            position: "absolute",
+            inset: 0,
+            backgroundImage:
+              "radial-gradient(rgba(34,197,94,0.08) 1px, transparent 1px)",
+            backgroundSize: "32px 32px",
+          }}
+        />
+        {/* Glow */}
+        <div
+          style={{
+            position: "absolute",
+            top: "-100px",
+            left: "50%",
+            transform: "translateX(-50%)",
+            width: 800,
+            height: 500,
+            background:
+              "radial-gradient(ellipse, rgba(34,197,94,0.2) 0%, transparent 70%)",
+            filter: "blur(40px)",
+          }}
+        />
+        {/* Logo mark */}
+        <div
+          style={{
+            width: 64,
+            height: 64,
+            borderRadius: 16,
+            background: "rgba(34,197,94,0.12)",
+            border: "1px solid rgba(34,197,94,0.3)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            marginBottom: 24,
           }}
         >
           <div
             style={{
-              width: 64,
-              height: 64,
-              borderRadius: 18,
-              background: '#7ed957',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              overflow: 'hidden'
+              width: 24,
+              height: 24,
+              borderRadius: "50%",
+              background: "#22c55e",
+              boxShadow: "0 0 16px rgba(34,197,94,0.6)",
             }}
-          >
-            <svg width="38" height="38" viewBox="0 0 64 64" fill="none">
-              <path
-                d="M16 28.5C17.6 27.3 19.5 26.2 21.8 25.4L19.4 17.3C18.8 15.4 20.6 13.7 22.5 14.3L29 16.4C30.1 16.8 31 17.4 31.8 18.2L33.1 19.4C37 18.6 41.2 18.4 45 19.1C48.6 16.4 53.8 17.1 56.5 20.7C58.6 23.4 58.6 27 56.8 29.7C60.7 32.4 63 37 63 42.5C63 49.2 60.7 57.4 56.4 63.3C55.8 64.1 54.9 64.6 54 64.6H43.3C41.9 64.6 40.7 63.8 40.1 62.5L38 58.2H31L28.9 62.5C28.3 63.8 27 64.6 25.7 64.6H15C13.2 64.6 11.7 63.2 11.5 61.4L10 44.9C6.1 43.3 2.8 40.3 0.7 36.4C0.2 35.4 0 34.3 0 33.2V26.9C0 24.9 1.6 23.3 3.6 23.3H11.5L16 28.5Z"
-                fill="white"
-              />
-              <path
-                d="M19.9 29.7C24.7 27.4 30.8 26.2 37.2 26.2C49.3 26.2 57 30.8 57 41.4C57 46.5 55.3 53.3 52.2 58.9H46.4L43.8 53.6C43.2 52.4 41.9 51.6 40.6 51.6H28.3C27 51.6 25.8 52.4 25.2 53.6L22.6 58.9H16.8L15.5 44.6C15.4 43.3 14.6 42.1 13.4 41.5C10.3 40.2 7.8 38 6 35.1V29.3H13C14 29.3 14.9 28.8 15.5 28L17.5 25.2L19.9 29.7Z"
-                fill="#7ed957"
-              />
-              <circle cx="48.5" cy="24" r="2.4" fill="#7ed957" />
-            </svg>
-          </div>
-          <div style={{ fontSize: 46, fontWeight: 700 }}>Clarium</div>
+          />
         </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-          <div style={{ fontSize: 64, lineHeight: 1.06, fontWeight: 700, maxWidth: 940 }}>
-            Organizacao financeira clara, direta e sem ruido visual.
-          </div>
-          <div style={{ fontSize: 30, color: '#a7bac5' }}>Baixe o APK Android e organize o mes com menos atrito.</div>
+        <div
+          style={{
+            fontSize: 72,
+            fontWeight: 800,
+            color: "#f0fdf4",
+            letterSpacing: "-2px",
+            lineHeight: 1.1,
+            marginBottom: 16,
+          }}
+        >
+          {siteConfig.name}
+        </div>
+        <div
+          style={{
+            fontSize: 28,
+            color: "rgba(240,253,244,0.5)",
+            letterSpacing: "-0.5px",
+          }}
+        >
+          Finanças simples. Vida clara.
+        </div>
+        {/* Badges */}
+        <div
+          style={{
+            display: "flex",
+            gap: 12,
+            marginTop: 40,
+          }}
+        >
+          {["100% Grátis", "Offline", "Local-first", "Android"].map((b) => (
+            <div
+              key={b}
+              style={{
+                padding: "8px 18px",
+                borderRadius: 20,
+                background: "rgba(34,197,94,0.1)",
+                border: "1px solid rgba(34,197,94,0.2)",
+                color: "#4ade80",
+                fontSize: 16,
+                fontFamily: "monospace",
+                letterSpacing: "0.5px",
+              }}
+            >
+              {b}
+            </div>
+          ))}
         </div>
       </div>
     ),
-    {
-      ...size
-    }
+    { ...size }
   );
 }

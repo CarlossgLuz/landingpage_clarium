@@ -1,70 +1,76 @@
-import type { Metadata } from 'next';
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
-import { notFound } from 'next/navigation';
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages, getTranslations } from "next-intl/server";
+import { routing } from "@/i18n/routing";
+import { siteConfig } from "@/lib/site";
+import "@/app/globals.css";
 
-import { isValidLocale, routing } from '@/i18n/routing';
-import { getLocalizedUrl, getSiteUrl, localizedMeta } from '@/lib/site';
+type Props = {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta" });
+  const url = `${siteConfig.url}/${locale}`;
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    metadataBase: new URL(siteConfig.url),
+    alternates: {
+      canonical: url,
+      languages: Object.fromEntries(
+        siteConfig.locales.map((l) => [l, `${siteConfig.url}/${l}`])
+      ),
+    },
+    openGraph: {
+      title: t("ogTitle"),
+      description: t("ogDescription"),
+      url,
+      siteName: siteConfig.name,
+      locale,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("ogTitle"),
+      description: t("ogDescription"),
+    },
+    robots: { index: true, follow: true },
+  };
+}
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
-  const { locale } = await params;
-  if (!isValidLocale(locale)) {
-    return {};
-  }
-
-  const item = localizedMeta[locale];
-  const canonical = getLocalizedUrl(locale);
-
-  return {
-    metadataBase: new URL(getSiteUrl()),
-    title: item.title,
-    description: item.description,
-    keywords: item.keywords,
-    alternates: {
-      canonical,
-      languages: {
-        'pt-BR': getLocalizedUrl('pt-BR'),
-        en: getLocalizedUrl('en'),
-        es: getLocalizedUrl('es')
-      }
-    },
-    openGraph: {
-      type: 'website',
-      locale,
-      title: item.title,
-      description: item.description,
-      siteName: 'Clarium',
-      url: canonical,
-      images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Clarium landing page preview' }]
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: item.title,
-      description: item.description,
-      images: ['/twitter-image']
-    }
-  };
-}
-
-export default async function LocaleLayout({
-  children,
-  params
-}: Readonly<{ children: React.ReactNode; params: Promise<{ locale: string }> }>) {
+export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
 
-  if (!isValidLocale(locale)) {
+  if (!routing.locales.includes(locale as "pt-BR" | "en" | "es")) {
     notFound();
   }
 
   const messages = await getMessages();
 
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
-      {children}
-    </NextIntlClientProvider>
+    <>
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <NextIntlClientProvider messages={messages}>
+        {children}
+      </NextIntlClientProvider>
+    </>
   );
 }

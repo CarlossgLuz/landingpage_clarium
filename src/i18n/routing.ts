@@ -1,13 +1,7 @@
-import { defineRouting } from 'next-intl/routing';
+import { defineRouting } from "next-intl/routing";
+import { siteConfig } from "@/lib/site";
 
 export const routing = defineRouting({
-  locales: ['pt-BR', 'en', 'es'],
-  defaultLocale: 'pt-BR',
-  localePrefix: 'always'
+  locales: siteConfig.locales,
+  defaultLocale: siteConfig.defaultLocale,
 });
-
-export type AppLocale = (typeof routing.locales)[number];
-
-export function isValidLocale(locale: string | undefined): locale is AppLocale {
-  return typeof locale === 'string' && routing.locales.includes(locale as AppLocale);
-}

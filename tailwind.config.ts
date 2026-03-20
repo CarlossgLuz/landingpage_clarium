@@ -1,59 +1,62 @@
-import type { Config } from 'tailwindcss';
+import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: ['class'],
-  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
     extend: {
       colors: {
-        canvas: '#040814',
-        canvasAlt: '#07101c',
-        panel: '#0c1625',
-        panelSoft: '#0f1d31',
-        panelElevated: '#102540',
-        border: '#1a3154',
-        text: '#edf5ff',
-        muted: '#90a7c1',
-        green: '#7ed957',
-        lime: '#9cf06b',
-        cyan: '#54a5ff',
-        redSoft: '#ff6b7a',
-        amber: '#f3b546',
-        greenSoft: '#0f7a57'
-      },
-      boxShadow: {
-        glow: '0 0 0 1px rgba(126, 217, 87, 0.18), 0 30px 90px rgba(126, 217, 87, 0.14)',
-        card: '0 24px 80px rgba(2, 7, 18, 0.52)',
-        blue: '0 24px 80px rgba(84, 165, 255, 0.16)'
-      },
-      backgroundImage: {
-        grid: 'linear-gradient(to right, rgba(76, 126, 151, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(76, 126, 151, 0.1) 1px, transparent 1px)',
-        glow:
-          'radial-gradient(800px circle at 12% 10%, rgba(126, 217, 87, 0.18), transparent 48%), radial-gradient(660px circle at 88% 12%, rgba(84, 165, 255, 0.18), transparent 40%), radial-gradient(720px circle at 50% 100%, rgba(31, 60, 102, 0.26), transparent 50%)',
-        hero:
-          'linear-gradient(180deg, rgba(4,8,20,0.14) 0%, rgba(4,8,20,0.8) 80%), radial-gradient(circle at top, rgba(84,165,255,0.18), transparent 35%)'
+        brand: {
+          50: "#f0fdf4",
+          100: "#dcfce7",
+          200: "#bbf7d0",
+          300: "#86efac",
+          400: "#4ade80",
+          500: "#22c55e",
+          600: "#16a34a",
+          700: "#15803d",
+          800: "#166534",
+          900: "#14532d",
+          950: "#052e16",
+        },
+        surface: {
+          950: "#060b0a",
+          900: "#0a1210",
+          800: "#0f1c19",
+          700: "#162620",
+          600: "#1e3329",
+        },
       },
       fontFamily: {
-        display: ['var(--font-space-grotesk)', 'sans-serif'],
-        body: ['var(--font-plus-jakarta)', 'sans-serif']
+        display: ["var(--font-display)", "sans-serif"],
+        body: ["var(--font-body)", "sans-serif"],
+        mono: ["var(--font-mono)", "monospace"],
+      },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      animation: {
+        "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "float": "float 6s ease-in-out infinite",
+        "glow": "glow 3s ease-in-out infinite alternate",
       },
       keyframes: {
         float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-10px)' }
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-12px)" },
         },
-        pulseLine: {
-          '0%, 100%': { opacity: '0.4', transform: 'scaleX(0.98)' },
-          '50%': { opacity: '1', transform: 'scaleX(1)' }
-        }
+        glow: {
+          from: { filter: "drop-shadow(0 0 8px rgba(34,197,94,0.3))" },
+          to: { filter: "drop-shadow(0 0 20px rgba(34,197,94,0.6))" },
+        },
       },
-      animation: {
-        float: 'float 6s ease-in-out infinite',
-        pulseLine: 'pulseLine 3.8s ease-in-out infinite'
-      }
-    }
+    },
   },
-  plugins: []
+  plugins: [],
 };
-
 export default config;

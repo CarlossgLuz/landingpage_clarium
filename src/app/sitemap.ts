@@ -1,34 +1,16 @@
-import type { MetadataRoute } from 'next';
-
-import { getLocalizedUrl, getSiteUrl } from '@/lib/site';
+import { MetadataRoute } from "next";
+import { siteConfig } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
-
-  return [
-    {
-      url: getSiteUrl(),
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 1
+  return siteConfig.locales.map((locale) => ({
+    url: `${siteConfig.url}/${locale}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: locale === siteConfig.defaultLocale ? 1 : 0.8,
+    alternates: {
+      languages: Object.fromEntries(
+        siteConfig.locales.map((l) => [l, `${siteConfig.url}/${l}`])
+      ),
     },
-    {
-      url: getLocalizedUrl('pt-BR'),
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 1
-    },
-    {
-      url: getLocalizedUrl('en'),
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 0.9
-    },
-    {
-      url: getLocalizedUrl('es'),
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 0.9
-    }
-  ];
+  }));
 }

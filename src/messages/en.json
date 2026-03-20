@@ -1,360 +1,208 @@
 {
-  "common": {
-    "skipToContent": "Skip to content",
-    "changeLanguage": "Change language",
-    "scrollDown": "Scroll down",
-    "scrollUp": "Back to top"
+  "meta": {
+    "title": "Clarium — Simple finances. Clear life.",
+    "description": "Minimalist finance app, 100% free, offline and local. Control your finances with clarity, without complexity.",
+    "ogTitle": "Clarium — Organize your finances with clarity",
+    "ogDescription": "Free. Offline. Local. Simple."
   },
   "nav": {
-    "aria": "Main navigation",
-    "comparison": "Comparison",
     "features": "Features",
-    "demo": "Screens",
-    "downloadNav": "Download",
+    "howItsMade": "Technology",
     "support": "Support",
-    "download": "Download APK",
-    "downloadPending": "APK soon"
+    "contact": "Contact",
+    "download": "Download APK"
   },
   "hero": {
-    "eyebrow": "Finance control without visual noise",
-    "title": "Less clutter. More clarity to decide the next move.",
-    "subtitle": "Clarium reorganizes your financial routine with a product-grade interface: local-first, direct, elegant and designed to reduce friction in every entry.",
-    "downloadCta": "Download Android APK",
-    "downloadPending": "Tell me when APK ships",
-    "exploreCta": "See comparison",
-    "installReasonTitle": "Why install",
-    "installFlowTitle": "Installs fast",
-    "snapshotTitle": "Clarium in 2 points",
-    "microProof": [
-      "local-first",
-      "3 languages",
-      "guided flow",
-      "no bloated dashboard"
-    ],
-    "showcaseLabel": "Scroll motion",
-    "showcaseTitle": "Real app visual",
-    "showcaseStats": [
-      {
-        "value": "4 screens",
-        "detail": "home, add, planning and insights inside one clear product story."
-      },
-      {
-        "value": "3 taps",
-        "detail": "to reach the essential flow without bloated menus and modal overload."
-      },
-      {
-        "value": "0 noise",
-        "detail": "from artificial dashboards when the goal is simply to get organized."
-      }
-    ],
-    "note": "Time-saving and friction-reduction estimates are based on comparing Clarium essential flows against overloaded finance apps full of extra steps, panels and secondary fields.",
-    "stats": [
-      {
-        "value": "up to 40%",
-        "label": "less time to register recurring expenses",
-        "detail": "fewer fields, fewer context switches and fewer menus before the task is done."
-      },
-      {
-        "value": "3 taps",
-        "label": "to reach the core monthly flow",
-        "detail": "home, add, planning and insights connect without visual labyrinths."
-      },
-      {
-        "value": "100%",
-        "label": "focused on personal organization",
-        "detail": "no artificial dashboard walls when the user just wants control."
-      }
-    ]
+    "eyebrow": "Android App · Free · Offline",
+    "headline": "Simple finances.",
+    "headlineAccent": "Clear life.",
+    "subheadline": "No more confusing dashboards. Clarium gives you real financial control — direct, clean, and smart.",
+    "ctaPrimary": "Download free APK",
+    "ctaSecondary": "Explore features",
+    "ctaFallback": "Coming soon",
+    "badges": {
+      "free": "100% Free",
+      "offline": "Works offline",
+      "local": "Local data",
+      "secure": "Secure",
+      "android": "Android",
+      "minimal": "Minimal UI"
+    },
+    "mockupAlt": "Clarium app screenshot"
+  },
+  "about": {
+    "eyebrow": "What is Clarium",
+    "headline": "Financial organization\nfor real people.",
+    "body": "Clarium is a personal finance app built on a simple premise: anyone should be able to organize their finances without becoming an analyst. No complicated spreadsheets, no hidden menus, no subscriptions.",
+    "body2": "A straight-to-the-point app. For everyday life."
   },
   "problem": {
-    "eyebrow": "Real comparison",
-    "title": "The difference between an app that looks polished and one that actually removes friction.",
-    "description": "Clarium does not sell complexity as sophistication. It swaps excess for fast reading, clear context and direct action.",
-    "genericLabel": "Generic finance apps",
-    "genericTitle": "Too much dashboard. Not enough decisions.",
-    "genericDescription": "A lot of the market still exaggerates cards, charts, modals and steps that exhaust the user before the basics are done.",
-    "genericPoints": [
-      "more clicks for tasks that should take seconds.",
-      "too many visual layers fighting for attention.",
-      "a corporate-tool tone for a personal problem.",
-      "less sense of control even with more things on screen."
+    "eyebrow": "The problem",
+    "headline": "Financial apps are\ntoo complex.",
+    "problemItems": [
+      "Dashboards full of charts nobody uses",
+      "Features hidden in deep menus",
+      "Forced to link a bank account",
+      "Paywalls for what actually matters",
+      "Data sent to external servers"
     ],
-    "clariumLabel": "Clarium",
-    "clariumTitle": "Lean structure, strong hierarchy and visible progress.",
-    "highlightValue": "40%",
-    "highlightLabel": "estimated less friction",
-    "clariumDescription": "The product is designed to make financial organization feel lighter without sacrificing depth. The result is an interface that feels calm while guiding action hard.",
-    "tableMetric": "Metric",
-    "tableGeneric": "Typical apps",
-    "tableClarium": "Clarium",
-    "rows": [
-      {
-        "metric": "Time to register an expense",
-        "generic": "heavy flow",
-        "clarium": "direct flow in a few steps"
-      },
-      {
-        "metric": "Monthly reading",
-        "generic": "cards competing with each other",
-        "clarium": "balance, income and outcome with clear hierarchy"
-      },
-      {
-        "metric": "Planning",
-        "generic": "scattered menus",
-        "clarium": "goal, card and recurrences in one block"
-      },
-      {
-        "metric": "Privacy",
-        "generic": "dependency on external layers",
-        "clarium": "local-first approach"
-      }
-    ],
-    "footnote": "This is not about looking minimal. It is about removing what slows financial organization down and surfacing what moves decisions forward."
+    "solutionEyebrow": "The solution",
+    "solutionHeadline": "Clarium solves this.",
+    "solutionItems": [
+      "Clean interface, only essentials",
+      "Everything in at most two taps",
+      "100% offline",
+      "Your data stays on your phone",
+      "Free, always"
+    ]
   },
   "features": {
-    "eyebrow": "What the product delivers",
-    "title": "Everything the user needs in front of them. Nothing that gets in the way.",
-    "description": "The app architecture was built for repeated use, not for empty visual spectacle.",
-    "promoEyebrow": "Core promise",
-    "promoValue": "0 noise",
-    "promoTitle": "A lighter finance routine without giving up control.",
-    "promoDescription": "Clarium turns the month into a readable sequence: balance, entries, planning and analytical reading in the same visual language.",
-    "promoPoints": [
-      "monthly control without widget clutter.",
-      "custom categories without a tiring setup.",
-      "simple insights to adjust the next move."
-    ],
+    "eyebrow": "Features",
+    "headline": "Everything you need.\nNothing you don't.",
     "items": [
       {
-        "icon": "spark",
-        "title": "Guided entry flow",
-        "description": "Pick the type, fill only what matters and finish without unnecessary friction."
+        "title": "Income & expenses",
+        "description": "Log entries and expenses quickly. History always accessible."
       },
       {
-        "icon": "chart",
-        "title": "Readable insights",
-        "description": "Simple comparisons to understand balance, categories and progress without turning into a noisy panel."
+        "title": "Recurring items",
+        "description": "Fixed bills and subscriptions registered once, always controlled."
       },
       {
-        "icon": "layers",
-        "title": "Planning in one layer",
-        "description": "Monthly goal, card cycle and recurring entries sit together to reduce search and context loss."
+        "title": "Custom categories",
+        "description": "Organize your way. Your categories, your logic."
       },
       {
-        "icon": "moon",
-        "title": "Consistent dark-first UI",
-        "description": "Deep surfaces, strong contrast and accents inspired by the app itself."
+        "title": "100% offline",
+        "description": "No internet, no servers. Works wherever you are."
       },
       {
-        "icon": "globe",
-        "title": "pt-BR, en and es",
-        "description": "The landing and the experience are ready for three languages from day one."
+        "title": "Local data",
+        "description": "Your data stays on your device. Nobody else accesses it."
       },
       {
-        "icon": "shield",
-        "title": "Privacy by principle",
-        "description": "Personal finance organization with a local-first mindset and less dependency on what is unnecessary."
+        "title": "Multilingual",
+        "description": "Available in Portuguese, English and Spanish."
       }
     ]
   },
   "demo": {
-    "eyebrow": "Product screens",
-    "title": "The landing visual language now speaks the same language as the app.",
-    "description": "The screens below follow the direction of the app shots you shared: deep graphite, technical blue, green for positive balance and strong hierarchy.",
-    "flowEyebrow": "Usage story",
-    "flowTitle": "From monthly overview to entry flow, with no rhythm break.",
-    "flowDescription": "Each screen solves a real task. The user knows where they are, what to do and what changed in the month without reading an entire dashboard.",
-    "flowSteps": [
-      "home summarizes balance, income, outcome, goal and latest entries.",
-      "add keeps the form essential and highlights the right category.",
-      "planning gathers goal, card and recurrences in the same context.",
-      "insights compares income, spending and progress in instant reading."
-    ],
-    "placeholderAlt": "Clarium {screen} screen",
-    "screens": {
-      "overview": {
-        "title": "Home",
-        "subtitle": "Monthly summary, balance, card cycle and goal without excess."
-      },
-      "transactions": {
-        "title": "Insights",
-        "subtitle": "Strong comparisons to adjust the month without interpreting complex dashboards."
-      },
-      "categories": {
-        "title": "Planning",
-        "subtitle": "Goal, card and recurrences in one context with objective reading."
-      },
-      "settings": {
-        "title": "Add",
-        "subtitle": "Guided flow for income, expense and fixed entries with only what matters."
-      }
-    },
-    "footnote": "The screens live in /public/screenshots for future replacement with final captures without rebuilding the section."
+    "eyebrow": "Interface",
+    "headline": "Clean by design.",
+    "body": "Every screen was designed to reduce friction. Right information, at the right time, in the right place."
   },
-  "build": {
-    "eyebrow": "How it was built",
-    "title": "Product, design and frontend working toward the same decision: convert and retain.",
-    "description": "The landing was reorganized to sell the APK better and prove the app has real visual and technical criteria.",
-    "points": [
-      {
-        "title": "Product direction",
-        "description": "The focus moved from disconnected features to a clear buying argument: less friction, more clarity and real organization."
-      },
-      {
-        "title": "Visual alignment with the app",
-        "description": "The landing now draws from the same language as the shared screens, with deep surfaces, controlled glow and stronger hierarchy."
-      },
-      {
-        "title": "Scroll motion",
-        "description": "Animations now support the narrative with stronger reveals and a showcase tied to scroll movement."
-      },
-      {
-        "title": "Foundation ready to grow",
-        "description": "i18n, SEO, environment-driven CTA and reusable components remain intact for future expansion."
-      }
+  "howMade": {
+    "eyebrow": "How it was made",
+    "headline": "Built with care,\nnot with shortcuts.",
+    "body": "Every design and code decision was made with a focus on real usability and consistent performance. Clean architecture, reusable components, UX validated in practice.",
+    "pillars": [
+      { "title": "UX-first", "desc": "Interface validated with real users before any new feature." },
+      { "title": "Performance", "desc": "Lightweight screens, smooth navigation, instant response even offline." },
+      { "title": "Clean code", "desc": "Scalable and maintainable architecture for continuous evolution." },
+      { "title": "Security", "desc": "Zero data transmission. Everything stays on your device." }
     ]
   },
   "tech": {
-    "eyebrow": "Technical base",
-    "title": "A stack chosen to support a serious product, not disposable visual experimentation.",
-    "description": "The implementation is organized for speed, indexing, accessibility and predictable maintenance.",
+    "eyebrow": "Technologies",
+    "headline": "Modern stack.\nSolid code.",
     "items": [
-      {
-        "key": "next",
-        "title": "Next.js App Router",
-        "description": "Locale routes, strong metadata and a modern foundation for a conversion-focused landing."
-      },
-      {
-        "key": "typescript",
-        "title": "TypeScript",
-        "description": "Typing that keeps consistency as new sections and product capabilities are added."
-      },
-      {
-        "key": "tailwind",
-        "title": "Tailwind CSS",
-        "description": "A controlled design system without depending on generic UI libraries."
-      },
-      {
-        "key": "motion",
-        "title": "Framer Motion",
-        "description": "Reveals and scroll motion with reduced-motion respect and no unnecessary jank."
-      },
-      {
-        "key": "intl",
-        "title": "next-intl",
-        "description": "Real multilingual experience across pt-BR, en and es."
-      },
-      {
-        "key": "seo",
-        "title": "Technical SEO",
-        "description": "Per-locale metadata, sitemap, robots, Open Graph and Twitter cards already wired."
-      },
-      {
-        "key": "privacy",
-        "title": "Local-first privacy",
-        "description": "Product messaging and configuration both reinforce local data control."
-      },
-      {
-        "key": "architecture",
-        "title": "Modular architecture",
-        "description": "Copy, assets and CTA changes can happen without breaking the structure."
-      },
-      {
-        "key": "multilingual",
-        "title": "Multilingual experience",
-        "description": "Language switching is functional across the full landing narrative."
-      }
-    ]
-  },
-  "download": {
-    "title": "Download the APK and start organizing the month with an interface that does not slow you down.",
-    "description": "The page is designed to convert above the fold and reinforce download intent at high-intent points. Once the final APK URL is set, the CTA becomes direct download.",
-    "availability": "Android distribution through the official APK. The same link can host future updates.",
-    "cta": "Download APK now",
-    "pending": "Notify me when available",
-    "faqCta": "Questions before download",
-    "statusReady": "APK configured: CTA is in direct download mode.",
-    "statusWaiting": "APK not configured yet: CTA stays in waiting mode without breaking conversion.",
-    "points": [
-      {
-        "value": "1 APK",
-        "label": "one official installation path that can also host future releases."
-      },
-      {
-        "value": "3 languages",
-        "label": "one product structure prepared for local and international users."
-      },
-      {
-        "value": "0 account",
-        "label": "no unnecessary signup just to understand the product value."
-      }
+      { "name": "Kotlin", "desc": "Modern and safe native Android language" },
+      { "name": "Jetpack Compose", "desc": "Declarative, performant and scalable UI" },
+      { "name": "Room Database", "desc": "Robust and typed local persistence" },
+      { "name": "Hilt", "desc": "Clean and testable dependency injection" },
+      { "name": "Coroutines", "desc": "Native Kotlin async programming" },
+      { "name": "Material 3", "desc": "Google's modern design system" },
+      { "name": "Clean Architecture", "desc": "Clear separation of concerns" },
+      { "name": "MVVM", "desc": "Robust and testable architecture pattern" }
     ]
   },
   "support": {
-    "eyebrow": "Support continuity",
-    "title": "If Clarium feels like a product worth existing, help keep it alive.",
-    "description": "This app is independent. Every contribution helps fund interface refinement, Android development, testing, new captures and more professional distribution.",
-    "impactPoints": [
-      "more UX iterations without rushing scope cuts.",
-      "more time spent on visual polish and performance.",
-      "more breathing room to turn an MVP into a memorable product."
-    ],
-    "pixLabel": "Direct Pix",
-    "pixTitle": "Voluntary support, fast and with no intermediaries.",
-    "pixDescription": "If the product direction made sense to you, a simple contribution already helps accelerate the next Clarium phase.",
-    "pixKeyLabel": "Pix key",
-    "copy": "Copy Pix key",
-    "copied": "Pix key copied",
-    "copyError": "Copy failed",
-    "note": "Support is not required to use the project. But support shortens the path between a strong idea and a stronger product."
+    "eyebrow": "Support the project",
+    "headline": "Help Clarium\nkeep evolving.",
+    "body": "Clarium is an independent project, built with real dedication. If it helped you, consider supporting it with any amount via Pix. Every contribution funds new improvements and maintenance.",
+    "pixLabel": "Pix key",
+    "copyButton": "Copy key",
+    "copiedButton": "Copied!",
+    "disclaimer": "100% voluntary support. The app will remain free regardless."
   },
   "author": {
-    "eyebrow": "Author",
-    "title": "Product, design and implementation signed by the person building Clarium.",
-    "description": "{name} leads product vision, experience design and frontend implementation for this landing and the app ecosystem."
+    "eyebrow": "Authorship",
+    "headline": "Developed by\nCarlos Gabriel.",
+    "body": "Independent Android developer passionate about well-crafted interfaces and software that actually works. Clarium is a personal product project, not a template.",
+    "officialChannels": "Official channels",
+    "antifraud": "Warning: the only official channels for Clarium and its author are those listed here. Be wary of any copy, clone or unofficial version of the app.",
+    "links": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "email": "Email"
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "headline": "Let's talk.",
+    "body": "Have feedback, found a bug, have a suggestion or want to hire? Any channel below works.",
+    "items": [
+      { "label": "LinkedIn", "desc": "Professional message or networking" },
+      { "label": "Email", "desc": "Bugs, feedback and hiring" },
+      { "label": "GitHub", "desc": "Issues and technical contributions" }
+    ]
   },
   "faq": {
     "eyebrow": "FAQ",
-    "title": "Frequently asked questions before download.",
-    "description": "Direct answers about APK, privacy, languages and project evolution.",
+    "headline": "Frequently asked questions.",
     "items": [
       {
-        "question": "How does APK download work?",
-        "answer": "As soon as NEXT_PUBLIC_APK_URL is set with the official URL, the main CTA opens the APK directly."
+        "q": "Is the app really free?",
+        "a": "Yes. 100% free, no ads, no subscription, no paywall. Always."
       },
       {
-        "question": "Does Clarium require an account?",
-        "answer": "No. The product idea is to reduce friction and prioritize personal organization with a local-first approach."
+        "q": "Does it work without internet?",
+        "a": "Completely. Clarium was built to work offline. No connection needed for anything."
       },
       {
-        "question": "Which languages are ready on the landing?",
-        "answer": "pt-BR, English and Spanish, with functional switching in the main interface."
+        "q": "Where does my financial data stay?",
+        "a": "On your phone, and only there. The app has no server, no cloud backup, sends nothing anywhere. Your data is yours."
       },
       {
-        "question": "Will the project keep growing?",
-        "answer": "Yes. The base is prepared for new captures, official APK rollout, copy refinement and app evolution without major rework."
+        "q": "Is it safe to install an APK outside the Play Store?",
+        "a": "Yes, as long as you download from the official link on this page. The APK is signed by the author and can be verified. Be wary of other sources."
       },
       {
-        "question": "Is there a real privacy concern in the product?",
-        "answer": "Yes. Product messaging and configuration were designed to reinforce a local-first approach with less unnecessary dependency."
+        "q": "How do I download the APK?",
+        "a": "Click the download button at the top of this page. The APK file will download directly to your Android device."
       },
       {
-        "question": "How can I send feedback or support the project?",
-        "answer": "You can reach out through the author's GitHub or LinkedIn and also support directly through the Pix key shown on the page."
+        "q": "Will the project keep receiving updates?",
+        "a": "Yes. Clarium is a continuously evolving project. New versions with improvements are released regularly."
+      },
+      {
+        "q": "How can I support the project?",
+        "a": "Via Pix, in the support section of this page. Any amount is welcome and goes directly to development."
+      },
+      {
+        "q": "How do I get in touch?",
+        "a": "Via LinkedIn, email or GitHub. All official channels are in the contact section and footer of this page."
       }
     ]
   },
   "footer": {
-    "projectLabel": "minimal finance app",
-    "description": "Clarium is a financial organization app with a clean visual language, clarity-first decisions and a local-first mindset for real users.",
-    "linksTitle": "Navigation",
-    "comparison": "Comparison",
-    "download": "Download",
-    "support": "Support",
-    "faq": "FAQ",
-    "connectTitle": "Author",
-    "copyright": "© {year} Clarium. All rights reserved.",
-    "notice": "Independent project under continuous evolution.",
-    "backToTop": "Back to top"
-  }
+    "tagline": "Simple finances. Clear life.",
+    "links": {
+      "title": "Links",
+      "download": "Download APK",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Email",
+      "contact": "Contact"
+    },
+    "legal": {
+      "title": "Legal",
+      "official": "Official channels",
+      "privacy": "Local data — no tracking"
+    },
+    "copyright": "© {year} Carlos Gabriel. Independent project.",
+    "officialNotice": "The official channels of Clarium are exclusively those listed on this page.",
+    "independentNote": "Independent project · No affiliation with financial companies"
+  },
+  "langSwitch": "Language"
 }
