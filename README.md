@@ -2,6 +2,10 @@
 
 Landing page oficial do Clarium, construída em `Next.js 14` com `App Router`, `next-intl` e `Tailwind CSS`.
 
+Deploy atual:
+
+- Produção: `https://clarium.vercel.app`
+
 ## Visão Geral
 
 - Landing multilíngue: `pt-BR`, `en`, `es`
@@ -60,9 +64,9 @@ Variáveis:
 Exemplo:
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://clarium.app
+NEXT_PUBLIC_SITE_URL=https://clarium.vercel.app
 NEXT_PUBLIC_APK_URL=
-NEXT_PUBLIC_SITE_REPO_URL=https://github.com/SEU_USUARIO/SEU_REPO_DA_LANDING
+NEXT_PUBLIC_SITE_REPO_URL=https://github.com/CarlossgLuz/landingpage_clarium
 NEXT_PUBLIC_APP_REPO_URL=https://github.com/CarlossgLuz/controle-fatura
 NEXT_PUBLIC_APP_REPO_BRANCH=feat/home-shell
 ```
@@ -107,6 +111,25 @@ Antes de publicar o APK, confirme:
 4. domínio final e favicon estão corretos
 5. o APK publicado corresponde à build assinada oficial
 
+## Deploy
+
+Deploy atual em produção:
+
+- `https://clarium.vercel.app`
+
+Estratégia recomendada:
+
+- Landing: `Vercel`
+- APK: `GitHub Releases`
+
+Fluxo resumido:
+
+1. Subir alterações no branch `main`
+2. A Vercel faz o deploy automático da landing
+3. Publicar o APK em `GitHub Releases`
+4. Preencher `NEXT_PUBLIC_APK_URL` com a URL oficial do asset
+5. Fazer novo deploy para ativar o link final do APK
+
 ## Licença
 
 Este repositório está sob [MIT](./LICENSE).
@@ -122,18 +145,18 @@ Se quiser comunicar ambos como open source sem ambiguidade, publique também uma
 ## Checklist de Publicação
 
 1. Configurar `.env.local` com domínio, APK e repositórios oficiais.
-2. Publicar o repositório da landing e preencher `NEXT_PUBLIC_SITE_REPO_URL`.
+2. Manter `NEXT_PUBLIC_SITE_URL=https://clarium.vercel.app` enquanto esse for o domínio oficial.
 3. Adicionar `LICENSE` no repositório do app, se quiser usar a expressão “open source” para ele também.
 4. Validar metadata final, favicon, links de contato e links antifraude.
-5. Subir o site na hospedagem final.
-6. Só depois publicar o link do APK.
+5. Publicar o APK em `GitHub Releases`.
+6. Atualizar `NEXT_PUBLIC_APK_URL` com o link oficial do asset.
+7. Fazer o deploy final na Vercel com as envs atualizadas.
 
 ## O Que Ainda Falta
 
 - URL final do APK
-- URL final do repositório público da landing
 - licença no repositório do app, se a comunicação oficial for “ambos open source”
-- validação final em ambiente com `node`/`npm` instalado para rodar `build` e `lint`
+- manter o projeto atualizado para uma versão corrigida do `Next.js 14`, já que `14.2.29` exibe aviso de vulnerabilidade no build
 
 ## Observações Técnicas
 
