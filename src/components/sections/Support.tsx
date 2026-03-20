@@ -47,6 +47,35 @@ export function Support() {
           {t("body")}
         </p>
 
+        {siteConfig.apkUrl && (
+          <div className="mb-8 p-6 rounded-2xl border border-[rgba(240,253,244,0.08)] bg-[rgba(255,255,255,0.02)] text-left">
+            <h3 className="text-sm font-display font-semibold text-white/85 mb-2">
+              {t("downloadTitle")}
+            </h3>
+            <p className="text-xs text-white/40 leading-relaxed mb-4">
+              {t("downloadBody")}
+            </p>
+            <div className="grid grid-cols-1 gap-2 text-xs font-mono text-white/55">
+              <div className="flex items-start justify-between gap-4">
+                <span className="text-white/30">{t("fileLabel")}</span>
+                <span className="text-right break-all">{siteConfig.apk.fileName}</span>
+              </div>
+              <div className="flex items-start justify-between gap-4">
+                <span className="text-white/30">{t("versionLabel")}</span>
+                <span className="text-right">{siteConfig.apk.version}</span>
+              </div>
+              <div className="flex items-start justify-between gap-4">
+                <span className="text-white/30">{t("sizeLabel")}</span>
+                <span className="text-right">{siteConfig.apk.sizeLabel}</span>
+              </div>
+              <div className="flex items-start justify-between gap-4">
+                <span className="text-white/30">{t("hashLabel")}</span>
+                <span className="text-right break-all">{siteConfig.apk.sha256}</span>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Pix card */}
         <div className="relative p-6 rounded-2xl border border-[rgba(34,197,94,0.18)] bg-[rgba(15,28,25,0.7)]">
           <div className="flex items-center justify-between mb-3">
